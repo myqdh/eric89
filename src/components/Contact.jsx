@@ -62,7 +62,7 @@ export default function Contact() {
           <div className="mt-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-paper/50">
             <p>&copy; {new Date().getFullYear()} {profile.name}. {profile.location}.</p>
             <a
-              href="/assets/CV_Quach_Dang_Hoang_My.pdf"
+              href="/assets/UIUXDesign_QuachDangHoangMy.pdf"
               download
               className="focus-ring inline-flex items-center gap-1.5 text-paper/70 hover:text-ember transition-colors duration-200"
             >
