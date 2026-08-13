@@ -61,7 +61,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
             transition={{ duration: reduced ? 0 : 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <div className="pb-8 sm:pb-10 sm:pl-[9rem] max-w-3xl">
+            <div className="pb-8 sm:pb-10 sm:pl-[9rem] max-w-5xl">
               <ul className="space-y-3">
                 {item.bullets.map((b, i) => (
                   <li
