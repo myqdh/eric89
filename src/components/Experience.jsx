@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Target, Trophy } from "lucide-react";
+import { BookText, Plus, Target, Trophy } from "lucide-react";
 import { experience } from "../data/cv";
 import Reveal from "./Reveal";
 import { usePrefersReducedMotion } from "../hooks/useReducedMotion";
@@ -96,6 +96,27 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                   <p className="text-sm text-ink/75 leading-relaxed whitespace-pre-line">
                     {item.keyAchievement}
                   </p>
+                </div>
+              </div>
+              <div className="mt-6 grid sm:grid-cols-2 gap-5 border border-line bg-paper p-5">
+                <div className="flex items-center gap-2">
+                  <BookText size={15} className="text-ember" />
+                  <h3 className="text-base font-semibold text-gray-900 tracking-wide">
+                    Ohmyhotel — UI/UX Case Study
+                  </h3>
+                </div>
+                <div className="flex sm:justify-end">
+                  <a
+                    href="/ohmyhotel/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 transition-colors group"
+                  >
+                    <span>Explore Project</span>
+                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
