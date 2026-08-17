@@ -107,7 +107,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                 </div>
                 <div className="flex sm:justify-end">
                   <a
-                    href="/ohmyhotel/index.html"
+                    href="/ohmyhotel/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 transition-colors group"
