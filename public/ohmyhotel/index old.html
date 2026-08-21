@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ohmyhotel & Ohmytrip — Case Study</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF6EF;
+    --paper: #FFFFFF;
+    --ink: #201B14;
+    --ink-soft: #5B5548;
+    --ink-faint: #96907F;
+    --line: #E4DDCC;
+    --orange: #ff4d1c;
+    --orange-deep: #C24D0E;
+    --peach: #FFEAD2;
+    --peach-soft: #FFF6EB;
+    --teal: #1F5C6B;
+    --teal-deep: #123C47;
+    --teal-soft: #E4EFF0;
+    --gap-orange: #E2A857;
+    --gap-bg: #FFF8EA;
+    --gap-text: #8C5E17;
+    --radius: 14px;
+    font-family: 'PretendardVariable', 'Pretendard', -apple-system, 'Noto Sans KR', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 40px; }
+
+  /* ---- top ticket strip ---- */
+  .topstrip {
+    background: var(--ink);
+    color: #F2EEE4;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding: 10px 0;
+  }
+  .topstrip .wrap { display: flex; justify-content: space-between; align-items: center; }
+  .topstrip span { opacity: 0.75; }
+  .topstrip b { color: var(--orange); font-weight: 600; }
+
+  /* ---- hero ---- */
+  .hero { padding: 88px 0 60px; position: relative; overflow: hidden; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange-deep);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px; height: 1px; background: var(--orange-deep);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+  }
+  h1.title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+  }
+  h1.title em {
+    font-style: normal;
+    color: var(--orange);
+  }
+  .hero-sub {
+    margin-top: 20px;
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 48ch;
+  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+  .tag {
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: var(--peach);
+    color: var(--orange-deep);
+    border: 1px solid #FFD9AE;
+  }
+  .tag.teal { background: var(--teal-soft); color: var(--teal-deep); border-color: #C7DBDD; }
+
+  .hero-shot {
+    position: relative;
+  }
+  .browser-frame {
+    background: var(--paper);
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 60px -20px rgba(32,27,20,0.28);
+    overflow: hidden;
+    /*transform: rotate(1.4deg);*/
+  }
+  .browser-chrome {
+    height: 30px;
+    background: #EFEAE0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #D7CFBE; }
+  .browser-frame img { width: 100%; display: block; }
+  .hero-shot::after {
+    content: "";
+    position: absolute;
+    width: 130px; height: 130px;
+    background: var(--orange);
+    border-radius: 50%;
+    top: -30px; right: -40px;
+    z-index: -1;
+    opacity: 0.14;
+  }
+
+  /* ---- ticket divider (signature element) ---- */
+  .stub {
+    position: relative;
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+  .stub svg { width: 100%; height: 100%; display: block; }
+  .stub-label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg);
+    padding: 0 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  section { padding: 56px 0; }
+  .section-head { margin-bottom: 34px; /*max-width: 62ch;*/ }
+  h2.h {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .section-head p {
+    margin-top: 10px;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+  }
+  .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  /* overview */
+  .overview-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 36px;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+  .overview-card b { color: var(--ink); font-weight: 700; }
+
+  /* placeholder callouts */
+  .fillbox {
+    border: 1.5px dashed var(--gap-orange);
+    background: var(--gap-bg);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-top: 18px;
+  }
+  .fillbox .fb-tag {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gap-text);
+    background: #FCE3B0;
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .fillbox p { font-size: 14.5px; color: #7A5B22; }
+  .fillbox ul { margin: 10px 0 0 18px; font-size: 14px; color: #7A5B22; }
+  .fillbox li { margin-bottom: 4px; }
+
+  /* role list */
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .role-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .role-card .ic {
+    width: 34px; height: 34px;
+    border-radius: 9px;
+    background: var(--peach);
+    color: var(--orange-deep);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .role-card h3 { font-size: 15.5px; font-weight: 700; margin-bottom: 6px; }
+  .role-card p { font-size: 14px; color: var(--ink-soft); }
+
+  /* design system */
+  .ds-frame {
+    background: #1e1e1f;
+    border-radius: 18px;
+    padding: 22px;
+  }
+  .ds-frame img { width: 100%; display: block; border-radius: 8px; }
+  .ds-caption-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 18px;
+  }
+  .ds-caption {
+    font-size: 13px;
+    color: var(--ink-soft);
+    border-left: 2px solid var(--orange);
+    padding-left: 12px;
+  }
+  .ds-caption b { display: block; color: var(--ink); font-size: 13.5px; margin-bottom: 2px; }
+
+  /* flows - boarding gate style */
+  .flow-strip {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scrollbar-width: thin;
+  }
+  .flow-card {
+    flex: 0 0 250px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .flow-gate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--ink);
+    color: #F2EEE4;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+  .flow-gate .gate-n { color: var(--orange); font-weight: 600; }
+  .flow-shot { background: #F1ECE1; padding: 14px 14px 0; }
+  .flow-shot img { width: 100%; display: block; border-radius: 6px 6px 0 0; border: 1px solid #E1D9C7; border-bottom: none; }
+  .flow-body { padding: 16px; }
+  .flow-body h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; }
+  .flow-body p { font-size: 14px; color: var(--ink-soft); }
+  .flow-body .why {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--gap-text);
+    background: var(--gap-bg);
+    border: 1px dashed var(--gap-orange);
+    border-radius: 8px;
+    padding: 8px 10px;
+  }
+
+  /* results placeholder */
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .result-card {
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .result-card .rn { font-family: 'PretendardVariable', 'Pretendard', -apple-system, 'Noto Sans KR', sans-serif; font-size: 21.5px; font-weight: 700; color:var(--orange); }
+  .result-card p { font-size: 14px; color: #000000; margin-top: 6px; }
+
+  /* split note */
+  .note-card {
+    display: flex;
+    gap: 18px;
+    background: var(--peach-soft);
+    border: 1px solid #FFDDB0;
+    border-radius: var(--radius);
+    padding: 24px 28px;
+  }
+  .note-card .ic2 {
+    flex: 0 0 auto;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+  }
+  .note-card p { font-size: 14.5px; color: #6B4A1B; }
+  .note-card b { color: var(--orange-deep); }
+
+  footer {
+    padding: 40px 0 60px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 860px) {
+    .wrap { padding: 0 22px; }
+    .hero-grid { grid-template-columns: 1fr; }
+    h1.title { font-size: 36px; }
+    .role-grid { grid-template-columns: 1fr; }
+    .ds-caption-row { grid-template-columns: repeat(2, 1fr); }
+    .result-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topstrip">
+  <div class="wrap">
+    <span>CASE STUDY · <b>OHM-2025</b></span>
+    <span>WEB &amp; APP · B2C TRAVEL PLATFORM</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Product design case study</div>
+      <h1 class="title"><em>Ohmyhotel</em></h1>
+      <p class="hero-sub">Designing and improving the hotel booking experience across web and mobile, supported by a shared design system for multiple Asian markets.</p>
+      <div class="tag-row">
+        <span class="tag">Product Design</span>
+        <span class="tag teal">Web + Mobile App</span>
+        <span class="tag">Design System</span>
+      </div>
+    </div>
+    <div class="hero-shot">
+      <div class="browser-frame">
+        <div class="browser-chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>
+        <img src="https://eric89.vercel.app/ohmyhotel/home.png" alt="Trang chủ web Ohmyhotel" class="" loading="lazy">      
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stub"><svg viewBox="0 0 1040 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="1040" y2="1" stroke="#D8CFB8" stroke-width="1.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg><div class="stub-label">Boarding · case study</div></div>
+
+<section id="overview">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">01 — Background</span>
+      <h2 class="h">Understanding the Product</h2>
+    </div>
+    <div class="overview-card">
+      <p>Ohmyhotel is a B2C travel platform for desktop and mobile, helping users book hotels and plan trips across multiple Asian markets. The product is part of the Ohmyhotel&Co travel technology ecosystem.</p>
+    
+    </div>
+    <div class="fillbox">
+      <span class="fb-tag">Pain points:</span>
+      <ul>
+        <li>There was no shared design system, which led to inconsistent fonts, colors, spacing, component sizes, and UI patterns across web and mobile. This slowed down the design process and made product updates more difficult.</li>
+        <li>The website was quite simple and not flexible enough to support different marketing campaigns, promotions, and content needs.</li>
+        <li>Several UI and usability issues affected the overall experience and consistency across devices.</li>
+      </ul>
+      <br />
+      <span class="fb-tag">Project goals:</span>
+      <ul>
+        <li>Build a shared design system with reusable components and clear guidelines to improve consistency, speed up the design process, simplify future updates, and reduce UI errors across web and mobile.</li>
+        <li>Optimize and redesign the existing interface to create a smoother, clearer, and more consistent user experience.</li>
+        <li>Create flexible layouts and components to better support marketing campaigns, promotions, and content across different Asian markets.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="stub"><svg viewBox="0 0 1040 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="1040" y2="1" stroke="#D8CFB8" stroke-width="1.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg><div class="stub-label">Gate · Role</div></div>
+
+<section id="role">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">02 — Role</span>
+      <h2 class="h">Scope of Work</h2>
+    </div>
+    <div class="role-grid">
+      <div class="role-card">
+        <div class="ic">1</div>
+        <h3>UI/UX design for both (B2C & B2B)</h3>
+        <p>Designed new features, improved existing user flows, and maintained visual and functional consistency across the product.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic">2</div>
+        <h3>UI Testing & Developer Collaboration</h3>
+        <p>Tested the interface across releases, tracked UI issues, and worked closely with developers to fix problems before launch.</p>
+      </div>
+      <div class="role-card" style="grid-column: span 2;">
+        <div class="ic">3</div>
+        <h3>UX Testing & Improvement</h3>
+        <p>Tested key user flows, identified usability issues, proposed solutions, and worked with the team to improve the experience.</p>
+        <div class="fillbox" style="margin-top:14px;">
+          <span class="fb-tag">Case 01 - Mobile Search</span>
+          <p><b>Problem:</b> On mobile, pressing the “Go” key after entering a hotel name did not start the search. Users had to tap the “Apply” button instead, adding an extra step.</p>
+          <p><b>What I did:</b> I found the issue while testing the search flow and proposed using the “Go” key to trigger the same action as the “Apply” button. I then worked with developers to implement the fix.</p>
+          <p><b>Result:</b> The search flow became faster and more natural for mobile users.</p>
+        </div>
+        <div class="fillbox" style="margin-top:14px;">
+          <span class="fb-tag">Case 02 — Confirmation Popup</span>
+          <p><b>Problem:</b> The booking confirmation popup used both “Cancel” and “Close,” which could confuse users about what each action would do.</p>
+          <p><b>What I did:</b> I identified the issue while testing the checkout flow and proposed clearer actions, such as “Cancel booking” and “Continue editing.”.</p>
+          <p><b>Result:</b> The new labels made the actions easier to understand and reduced the risk of users selecting the wrong option.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stub"><svg viewBox="0 0 1040 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="1040" y2="1" stroke="#D8CFB8" stroke-width="1.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg><div class="stub-label">Gate · System</div></div>
+
+<section id="design-system">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">03 — Platform</span>
+      <h2 class="h">Shared design system for multiple sub-brands</h2>
+      <p>A common platform and reusable components across Ohmyhotel, Ohmytrip, and Ohmyhotel.biz — helps maintain a consistent experience while simplifying product development and scaling.</p>
+    </div>
+    <div class="ds-frame">
+      <img src="https://eric89.vercel.app/ohmyhotel/ds.png" alt="Trang chủ web Ohmyhotel" class="" loading="lazy">          
+    </div>
+    <div class="ds-caption-row">
+      <div class="ds-caption"><b>Logo</b>Custom variations for Ohmyhotel.</div>
+      <div class="ds-caption"><b>Typophraphy</b>Pretendard with multiple font weights.</div>
+      <div class="ds-caption"><b>Colors</b>Shared color tokens for brand colors, UI states, and actions.</div>
+      <div class="ds-caption"><b>Form Components</b>Reusable inputs, dropdowns, selectors, and more.</div>
+    </div>
+  </div>
+</section>
+
+<div class="stub"><svg viewBox="0 0 1040 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="1040" y2="1" stroke="#D8CFB8" stroke-width="1.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg><div class="stub-label">Gate · Design</div></div>
+
+<section id="flows">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">04 — Design Solution</span>
+      <h2 class="h">Search experience across web & mobile</h2>
+      <p>A look at how the core hotel search experience was redesigned across desktop and mobile, from starting a search to browsing results.</p>
+    </div>
+    <div class="flow-strip">
+      <div class="flow-card" style="flex: 0 0 400px;">
+        <div class="flow-gate"><span class="gate-n">01</span><span>Desktop - Home</span></div>
+        <div class="flow-shot"><img src="https://eric89.vercel.app/ohmyhotel/w1.png" alt="Trang chủ web Ohmyhotel" class="" loading="lazy">        </div>
+        <div class="flow-body">
+          <h4>Home</h4>
+          <p>The main search fields — destination, dates, and guests — are grouped together at the top of the page.</p>
+          <div class="why"><b>Why:</b> This helps users quickly understand what information they need and start searching with fewer steps.</div>
+        </div>
+      </div>
+      <div class="flow-card" style="flex: 0 0 400px;">
+        <div class="flow-gate"><span class="gate-n">02</span><span>Desktop - Search Results</span></div>
+        <div class="flow-shot"><img src="https://eric89.vercel.app/ohmyhotel/w2.png" alt="Trang chủ web Ohmyhotel" class="" loading="lazy">        </div>
+        <div class="flow-body">
+          <h4>Search Results</h4>
+          <p>Search details, filters, sorting, and hotel results are organized in one view for easier browsing and comparison.</p>
+          <div class="why"><b>Why:</b> This helps users narrow down their options and compare hotels without moving between multiple screens.</div>
+        </div>
+      </div>
+      
+      <div class="flow-card">
+        <div class="flow-gate"><span class="gate-n">03</span><span>Mobile - Home</span></div>
+        <div class="flow-shot"><img src="https://eric89.vercel.app/ohmyhotel/m1.png" alt="Trang chủ web Ohmyhotel" class="" loading="lazy">        </div>
+        <div class="flow-body">
+          <h4>Home</h4>
+          <p>Destination, dates, and guests are grouped into a simple search area designed for smaller screens.</p>
+          <div class="why"><b>Why:</b> This keeps the main search action clear and easy to use on mobile.</div>
+        </div>
+      </div>
+
+      <div class="flow-card">
+        <div class="flow-gate"><span class="gate-n">04</span><span>Mobile - Search Results</span></div>
+        <div class="flow-shot"><img src="https://eric89.vercel.app/ohmyhotel/m2.png" alt="Trang chủ web Ohmyhotel" class="" loading="lazy">        </div>
+        <div class="flow-body">
+          <h4>Search Results</h4>
+          <p>Key hotel information such as images, ratings, benefits, and prices is prioritized for quick scanning.</p>
+          <div class="why"><b>Why:</b> This helps users compare options quickly while keeping the amount of information manageable on a smaller screen.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="stub"><svg viewBox="0 0 1040 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="1040" y2="1" stroke="#D8CFB8" stroke-width="1.5" stroke-dasharray="2 8" stroke-linecap="round"/></svg><div class="stub-label">Landing · Results</div></div>
+
+<section id="results">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">05 — Impact</span>
+      <h2 class="h">Results</h2>
+    </div>
+    <div class="result-grid">
+      <div class="result-card"><div class="rn">Scalable Design System</div><p>A shared system of reusable components and guidelines improved consistency across web and mobile, reduced repetitive design work, and made future updates easier.</p></div>
+      <div class="result-card"><div class="rn">Better user experience</div><p>Redesigned key flows and fixed UI and usability issues to create a clearer, smoother, and more consistent experience across devices.</p></div>
+      <div class="result-card"><div class="rn">Better Marketing Support</div><p>More flexible layouts and reusable components made it easier to create campaigns, promotions, and localized content for different markets.</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  OHMYHOTEL - CASE STUDY
+</footer>
+
+</body>
+</html>
