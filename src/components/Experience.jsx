@@ -98,6 +98,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                   </p>
                 </div>
               </div>
+              {item.company === "Ohmyhotel" && (
               <div className="mt-6 grid sm:grid-cols-2 gap-5 border border-line bg-paper p-5">
                 <div className="flex items-center gap-2">
                   <BookText size={15} className="text-ember" />
@@ -119,6 +120,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                   </a>
                 </div>
               </div>
+              )}
             </div>
           </motion.div>
         )}
