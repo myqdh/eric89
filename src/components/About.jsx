@@ -3,8 +3,8 @@ import { profile, summary } from "../data/cv";
 import Reveal from "./Reveal";
 
 const contactLinks = [
+    { icon: Mail, label: profile.email, href: `mailto:${profile.email}` },
   { icon: Phone, label: profile.phone, href: `tel:${profile.phone.replace(/[^\d+]/g, "")}` },
-  { icon: Mail, label: profile.email, href: `mailto:${profile.email}` },
   { icon: Globe, label: profile.website, href: profile.websiteUrl },
   { icon: Link2, label: profile.linkedin, href: profile.linkedinUrl },
   { icon: Palette, label: profile.behance, href: profile.behanceUrl },
