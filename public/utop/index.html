@@ -1,0 +1,1530 @@
+<!doctype html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utop &mdash; UI Showcase</title>
+  <style>
+    *,
+    :after,
+    :before {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgba(59, 130, 246, .5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
+
+    ::backdrop {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgba(59, 130, 246, .5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
+
+    /*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/
+    *,
+    :after,
+    :before {
+      box-sizing: border-box;
+      border: 0 solid #e5e7eb
+    }
+
+    :after,
+    :before {
+      --tw-content: ""
+    }
+
+    :host,
+    html {
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    body {
+      margin: 0;
+      line-height: inherit
+    }
+
+    hr {
+      height: 0;
+      color: inherit;
+      border-top-width: 1px
+    }
+
+    abbr:where([title]) {
+      -webkit-text-decoration: underline dotted;
+      text-decoration: underline dotted
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit
+    }
+
+    b,
+    strong {
+      font-weight: bolder
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      font-size: 1em
+    }
+
+    small {
+      font-size: 80%
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+    }
+
+    sub {
+      bottom: -.25em
+    }
+
+    sup {
+      top: -.5em
+    }
+
+    table {
+      text-indent: 0;
+      border-color: inherit;
+      border-collapse: collapse
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      margin: 0;
+      padding: 0
+    }
+
+    button,
+    select {
+      text-transform: none
+    }
+
+    button,
+    input:where([type=button]),
+    input:where([type=reset]),
+    input:where([type=submit]) {
+      -webkit-appearance: button;
+      background-color: transparent;
+      background-image: none
+    }
+
+    :-moz-focusring {
+      outline: auto
+    }
+
+    :-moz-ui-invalid {
+      box-shadow: none
+    }
+
+    progress {
+      vertical-align: baseline
+    }
+
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      height: auto
+    }
+
+    [type=search] {
+      -webkit-appearance: textfield;
+      outline-offset: -2px
+    }
+
+    ::-webkit-search-decoration {
+      -webkit-appearance: none
+    }
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      font: inherit
+    }
+
+    summary {
+      display: list-item
+    }
+
+    blockquote,
+    dd,
+    dl,
+    figure,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    p,
+    pre {
+      margin: 0
+    }
+
+    fieldset {
+      margin: 0
+    }
+
+    fieldset,
+    legend {
+      padding: 0
+    }
+
+    menu,
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0
+    }
+
+    dialog {
+      padding: 0
+    }
+
+    textarea {
+      resize: vertical
+    }
+
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+      opacity: 1;
+      color: #9ca3af
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 1;
+      color: #9ca3af
+    }
+
+    [role=button],
+    button {
+      cursor: pointer
+    }
+
+    :disabled {
+      cursor: default
+    }
+
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+      display: block;
+      vertical-align: middle
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto
+    }
+
+    [hidden]:where(:not([hidden=until-found])) {
+      display: none
+    }
+
+    .absolute {
+      position: absolute
+    }
+
+    .relative {
+      position: relative
+    }
+
+    .sticky {
+      position: sticky
+    }
+
+    .-left-\[3px\] {
+      left: -3px
+    }
+
+    .-right-\[3px\] {
+      right: -3px
+    }
+
+    .top-0 {
+      top: 0
+    }
+
+    .top-24 {
+      top: 6rem
+    }
+
+    .top-28 {
+      top: 7rem
+    }
+
+    .top-36 {
+      top: 9rem
+    }
+
+    .z-50 {
+      z-index: 50
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .ml-2 {
+      margin-left: .5rem
+    }
+
+    .mt-0\.5 {
+      margin-top: .125rem
+    }
+
+    .mt-1 {
+      margin-top: .25rem
+    }
+
+    .mt-14 {
+      margin-top: 3.5rem
+    }
+
+    .mt-4 {
+      margin-top: 1rem
+    }
+
+    .mt-5 {
+      margin-top: 1.25rem
+    }
+
+    .mt-7 {
+      margin-top: 1.75rem
+    }
+
+    .flex {
+      display: flex
+    }
+
+    .grid {
+      display: grid
+    }
+
+    .hidden {
+      display: none
+    }
+
+    .aspect-\[599\/426\] {
+      aspect-ratio: 599/426
+    }
+
+    .aspect-\[9\/19\.5\] {
+      aspect-ratio: 9/19.5
+    }
+
+    .h-10 {
+      height: 2.5rem
+    }
+
+    .h-12 {
+      height: 3rem
+    }
+
+    .h-2\.5 {
+      height: .625rem
+    }
+
+    .h-3 {
+      height: .75rem
+    }
+
+    .h-8 {
+      height: 2rem
+    }
+
+    .h-\[5px\] {
+      height: 5px
+    }
+
+    .h-full {
+      height: 100%
+    }
+
+    .h-px {
+      height: 1px
+    }
+
+    .w-2\.5 {
+      width: .625rem
+    }
+
+    .w-24 {
+      width: 6rem
+    }
+
+    .w-3 {
+      width: .75rem
+    }
+
+    .w-8 {
+      width: 2rem
+    }
+
+    .w-\[3px\] {
+      width: 3px
+    }
+
+    .w-full {
+      width: 100%
+    }
+
+    .max-w-2xl {
+      max-width: 42rem
+    }
+
+    .max-w-3xl {
+      max-width: 48rem
+    }
+
+    .max-w-7xl {
+      max-width: 80rem
+    }
+
+    .max-w-\[220px\] {
+      max-width: 220px
+    }
+
+    .scroll-mt-20 {
+      scroll-margin-top: 5rem
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr))
+    }
+
+    .grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .flex-col {
+      flex-direction: column
+    }
+
+    .items-center {
+      align-items: center
+    }
+
+    .justify-center {
+      justify-content: center
+    }
+
+    .justify-between {
+      justify-content: space-between
+    }
+
+    .gap-1\.5 {
+      gap: .375rem
+    }
+
+    .gap-2\.5 {
+      gap: .625rem
+    }
+
+    .gap-4 {
+      gap: 1rem
+    }
+
+    .gap-8 {
+      gap: 2rem
+    }
+
+    .gap-x-6 {
+      -moz-column-gap: 1.5rem;
+      column-gap: 1.5rem
+    }
+
+    .gap-y-12 {
+      row-gap: 3rem
+    }
+
+    .space-y-1>:not([hidden])~:not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(.25rem*(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(.25rem*var(--tw-space-y-reverse))
+    }
+
+    .overflow-hidden {
+      overflow: hidden
+    }
+
+    .scroll-smooth {
+      scroll-behavior: smooth
+    }
+
+    .truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .rounded-2xl {
+      border-radius: 1rem
+    }
+
+    .rounded-\[1\.5rem\] {
+      border-radius: 1rem
+    }
+
+    .rounded-\[2rem\] {
+      border-radius: 1.5rem
+    }
+
+    .rounded-\[3px\] {
+      border-radius: 3px
+    }
+
+    .rounded-\[9px\] {
+      border-radius: 9px
+    }
+
+    .rounded-full {
+      border-radius: 9999px
+    }
+
+    .border {
+      border-width: 1px
+    }
+
+    .border-b {
+      border-bottom-width: 1px
+    }
+
+    .border-t {
+      border-top-width: 1px
+    }
+
+    .border-neutral-100 {
+      --tw-border-opacity: 1;
+      border-color: rgb(245 245 245/var(--tw-border-opacity, 1))
+    }
+
+    .border-neutral-200 {
+      --tw-border-opacity: 1;
+      border-color: rgb(229 229 229/var(--tw-border-opacity, 1))
+    }
+
+    .border-neutral-200\/80 {
+      border-color: hsla(0, 0%, 90%, .8)
+    }
+
+    .border-orange-200 {
+      --tw-border-opacity: 1;
+      border-color: rgb(255 194 174/var(--tw-border-opacity, 1))
+    }
+
+    .bg-green-300 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(134 239 172/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-neutral-200 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(229 229 229/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-neutral-300 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(212 212 212/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-neutral-50 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(250 250 250/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-orange-50 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 243 239/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-orange-600 {
+      --tw-bg-opacity: 1;
+      background-color: #FF4D1C;
+    }
+
+    .bg-red-300 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(252 165 165/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-white {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-white\/80 {
+      background-color: hsla(0, 0%, 100%, .8)
+    }
+
+    .bg-yellow-300 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(253 224 71/var(--tw-bg-opacity, 1))
+    }
+
+    .object-cover {
+      -o-object-fit: cover;
+      object-fit: cover
+    }
+
+    .object-top {
+      -o-object-position: top;
+      object-position: top
+    }
+
+    .p-2 {
+      padding: .5rem
+    }
+
+    .px-3 {
+      padding-left: .75rem;
+      padding-right: .75rem
+    }
+
+    .px-3\.5 {
+      padding-left: .875rem;
+      padding-right: .875rem
+    }
+
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+    }
+
+    .py-1 {
+      padding-top: .25rem;
+      padding-bottom: .25rem
+    }
+
+    .py-1\.5 {
+      padding-top: .375rem;
+      padding-bottom: .375rem
+    }
+
+    .py-2\.5 {
+      padding-top: .625rem;
+      padding-bottom: .625rem
+    }
+
+    .py-20 {
+      padding-top: 5rem;
+      padding-bottom: 5rem
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem
+    }
+
+    .py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+      line-height: 2.25rem
+    }
+
+    .text-\[11px\] {
+      font-size: 11px
+    }
+
+    .text-base {
+      font-size: 1rem;
+      line-height: 1.5rem
+    }
+
+    .text-sm {
+      font-size: .875rem;
+      line-height: 1.25rem
+    }
+
+    .text-xs {
+      font-size: .75rem;
+      line-height: 1rem
+    }
+
+    .font-bold {
+      font-weight: 700
+    }
+
+    .font-extrabold {
+      font-weight: 800
+    }
+
+    .font-medium {
+      font-weight: 500
+    }
+
+    .font-semibold {
+      font-weight: 600
+    }
+
+    .uppercase {
+      text-transform: uppercase
+    }
+
+    .leading-tight {
+      line-height: 1.25
+    }
+
+    .tracking-\[0\.18em\] {
+      letter-spacing: .18em
+    }
+
+    .tracking-tight {
+      letter-spacing: -.025em
+    }
+
+    .text-neutral-400 {
+      --tw-text-opacity: 1;
+      color: rgb(163 163 163/var(--tw-text-opacity, 1))
+    }
+
+    .text-neutral-500 {
+      --tw-text-opacity: 1;
+      color: rgb(115 115 115/var(--tw-text-opacity, 1))
+    }
+
+    .text-neutral-900 {
+      --tw-text-opacity: 1;
+      color: rgb(23 23 23/var(--tw-text-opacity, 1))
+    }
+
+    .text-orange-600 {
+      --tw-text-opacity: 1;
+      color: #FF4D1C;
+    }
+
+    .text-white {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255/var(--tw-text-opacity, 1))
+    }
+
+    .antialiased {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale
+    }
+
+    .shadow-lg {
+      --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+      --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .shadow-neutral-200\/70 {
+      --tw-shadow-color: hsla(0, 0%, 90%, .7);
+      --tw-shadow: var(--tw-shadow-colored)
+    }
+
+    .ring-1 {
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+    }
+
+    .ring-black\/5 {
+      --tw-ring-color: rgba(0, 0, 0, .05)
+    }
+
+    .ring-neutral-200 {
+      --tw-ring-opacity: 1;
+      --tw-ring-color: rgb(229 229 229/var(--tw-ring-opacity, 1))
+    }
+
+    .backdrop-blur-md {
+      --tw-backdrop-blur: blur(12px);
+      -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+      backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+    }
+
+    .transition {
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-duration: .15s
+    }
+
+    .transition-transform {
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-duration: .15s
+    }
+
+    .duration-300 {
+      transition-duration: .3s
+    }
+
+    .hover\:-translate-y-1\.5:hover {
+      --tw-translate-y: -0.375rem;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+
+    .hover\:text-orange-600:hover {
+      --tw-text-opacity: 1;
+      color: #FF4D1C;
+    }
+
+    .hover\:shadow-xl:hover {
+      --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 8px 10px -6px rgba(0, 0, 0, .1);
+      --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .hover\:shadow-orange-200\/50:hover {
+      --tw-shadow-color: rgba(255, 194, 174, .5);
+      --tw-shadow: var(--tw-shadow-colored)
+    }
+
+    @media (min-width:420px) {
+      .xs\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    @media (min-width:640px) {
+      .sm\:block {
+        display: block
+      }
+
+      .sm\:flex {
+        display: flex
+      }
+
+      .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .sm\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+      }
+
+      .sm\:flex-row {
+        flex-direction: row
+      }
+
+      .sm\:gap-x-8 {
+        -moz-column-gap: 2rem;
+        column-gap: 2rem
+      }
+
+      .sm\:py-28 {
+        padding-top: 7rem;
+        padding-bottom: 7rem
+      }
+
+      .sm\:text-5xl {
+        font-size: 3rem;
+      }
+
+      .sm\:text-lg {
+        font-size: 1.125rem;
+      }
+
+      .sm\:text-sm {
+        font-size: .875rem;
+      }
+    }
+
+    @media (min-width:768px) {
+      .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr))
+      }
+    }
+
+    @media (min-width:1024px) {
+      .lg\:grid-cols-5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr))
+      }
+
+      .lg\:px-10 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem
+      }
+    }
+
+    @media (min-width:1280px) {
+      .xl\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr))
+      }
+
+      .xl\:grid-cols-7 {
+        grid-template-columns: repeat(7, minmax(0, 1fr))
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    }
+
+    /*::selection {
+      background: #FF4D1C;
+      color: #ffffff;
+    }*/
+  </style>
+</head>
+
+<body class="bg-white text-neutral-900 antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 border-b border-neutral-200/80 bg-white/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <nav class="hidden items-center gap-8 text-sm font-medium text-neutral-500 sm:flex">
+        <a href="#cover" class="transition hover:text-orange-600">Overview</a>
+        <a href="#grocery" class="transition hover:text-orange-600">Grocery Shopping</a>
+        <a href="#fnb" class="transition hover:text-orange-600">F&amp;B Store</a>
+        <a href="#employee" class="transition hover:text-orange-600">Link an Account</a>
+      </nav>
+      <span
+        class="rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5 text-xs font-semibold text-orange-600">
+        UI Showcase
+      </span>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="cover" class="bg-white scroll-mt-20 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="flex items-center gap-2.5">
+          <span class="h-3 w-3 rounded-[3px] bg-orange-600"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.18em] text-orange-600 sm:text-sm">Mobile App Design</span>
+        </div>
+        <h2 class="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-5xl">
+          Rewards, Food & Payments<br class="hidden sm:block" /> <span class="text-orange-600">in a Single Super
+            App</span>
+        </h2>
+        <div class="mt-5 space-y-1">
+          <p class="max-w-2xl text-base text-neutral-500 sm:text-lg">Utop is a technology app that helps users order food and shop, while quickly and conveniently earning rewards points at supermarkets, shopping malls, and dining centers.</p>
+        </div>
+        <div class="mt-7 h-[5px] w-24 rounded-full bg-orange-600"></div>
+
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-x-6 gap-y-12 sm:gap-x-8">
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:0ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="1.png"
+                  alt="Home screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">01</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Home</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Discover & search</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:60ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="2.png" 
+                 alt="Discover screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">02</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Discover</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Restaurant details</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:120ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="3.png" 
+                  alt="Voucher screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">03</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Voucher</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Redeem & earn points</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:180ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="4.png" 
+                  alt="Store screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">04</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Store</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Order builder</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:240ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="5.png" 
+                  alt="Cart screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">05</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Cart</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Review & checkout</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:300ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="6.png" 
+                  alt="Payment screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">06</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Payment</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Select payment method</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:360ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="7.png" 
+                  alt="Confirmation screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">07</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Confirmation</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Order confirmed</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="h-px w-full bg-neutral-200"></div>
+    </div>
+
+    <section id="grocery" class="bg-neutral-50 scroll-mt-20 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="flex items-center gap-2.5">
+          <span class="h-3 w-3 rounded-[3px] bg-orange-600"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.18em] text-orange-600 sm:text-sm">Flow &middot; Grocery Shopping</span>
+        </div>
+        <h2 class="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-5xl">
+          Bring the Local Market<br class="hidden sm:block" /> <span class="text-orange-600">Into Your Pocket</span>
+        </h2>
+        <div class="mt-5 space-y-1">
+          <p class="max-w-2xl text-base text-neutral-500 sm:text-lg">From choosing a trusted neighborhood market to
+            picking fresh produce by weight, transparent and reliable.</p>
+        </div>
+        <div class="mt-7 h-[5px] w-24 rounded-full bg-orange-600"></div>
+
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-x-6 gap-y-12 sm:gap-x-8">
+          <div class="flex flex-col items-center" data-aos style="transition-delay:0ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="c1.png" 
+                  alt="Market list screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">01</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Market list</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Browse nearby markets</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:60ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img src="c2.png" 
+                   alt="Market detail screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">02</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Market detail</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Info, categories & offers</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:120ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img  src="c3.png" 
+                  alt="Stall list screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">03</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Stall list</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Choose a trusted stall</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:180ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img  src="c4.png" 
+                  alt="Category screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">04</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Category</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Fresh fruit selection</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:240ms">
+            <div
+              class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img
+                 src="c5.png" 
+                  alt="Product screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">05</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Product</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Pick size & add to cart</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="h-px w-full bg-neutral-200"></div>
+    </div>
+
+    <section id="fnb" class="bg-white scroll-mt-20 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="flex items-center gap-2.5">
+          <span class="h-3 w-3 rounded-[3px] bg-orange-600"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.18em] text-orange-600 sm:text-sm">Flow &middot; F&amp;B
+            Store &mdash; Dining &amp; Delivery</span>
+        </div>
+        <h2 class="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-5xl">
+          From Browsing to Bite<br class="hidden sm:block" /> <span class="text-orange-600">in Three Simple Steps</span>
+        </h2>
+        <div class="mt-5 space-y-1">
+          <p class="max-w-2xl text-base text-neutral-500 sm:text-lg">A restaurant flow built for speed: rich visuals up
+            front, clear ordering steps, and a frictionless item customizer that gets diners
+            to checkout faster.</p>
+        </div>
+        <div class="mt-7 h-[5px] w-24 rounded-full bg-orange-600"></div>
+
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-x-6 gap-y-12 sm:gap-x-8">
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:0ms">
+            <div
+                class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img
+                 src="f1.png" 
+                  alt="Product screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">01</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Restaurant</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Overview & highlights</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:60ms">
+            <div
+                class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img
+                 src="f2.png" 
+                  alt="Product screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">02</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Order mode</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Dine-in or delivery, 3 steps</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center" data-aos style="transition-delay:120ms">
+            <div
+                class="relative w-full max-w-[220px] rounded-[2rem] border border-neutral-200 bg-white p-2 shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="relative overflow-hidden rounded-[1.5rem] bg-neutral-50 aspect-[9/19.5]">
+                <img
+                 src="f3.png" 
+                  alt="Product screen" class="h-full w-full object-cover object-top" loading="lazy" />
+              </div>
+              <!-- side buttons -->
+              <span class="absolute -left-[3px] top-24 h-8 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -left-[3px] top-36 h-10 w-[3px] rounded-full bg-neutral-300"></span>
+              <span class="absolute -right-[3px] top-28 h-12 w-[3px] rounded-full bg-neutral-300"></span>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-sm font-bold text-orange-600">03</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Item detail</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Choose size & quantity</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="h-px w-full bg-neutral-200"></div>
+    </div>
+
+    <section id="employee" class="bg-neutral-50 scroll-mt-20 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="flex items-center gap-2.5">
+          <span class="h-3 w-3 rounded-[3px] bg-orange-600"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.18em] text-orange-600 sm:text-sm">Flow &middot; Link employee ID cards</span>
+        </div>
+        <h2 class="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-5xl">
+          Tap a Card,<br class="hidden sm:block" /> <span class="text-orange-600">Link an Account</span>
+        </h2>
+        <div class="mt-5 space-y-1">
+          <p class="max-w-2xl text-base text-neutral-500 sm:text-lg">Utop links employee cards with the app via a web
+            platform &amp; login &mdash; swipe the</p>
+          <p class="max-w-2xl text-base text-neutral-500 sm:text-lg">card at the counter, scan the QR, then sign in with
+            a phone number to finish linking.</p>
+        </div>
+        <div class="mt-7 h-[5px] w-24 rounded-full bg-orange-600"></div>
+
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-6 gap-y-12 sm:gap-x-8">
+
+          <div class="flex flex-col" data-aos style="transition-delay:0ms">
+            <div
+              class="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="flex items-center gap-1.5 border-b border-neutral-100 bg-neutral-50 px-3.5 py-2.5">
+                <span class="h-2.5 w-2.5 rounded-full bg-red-300"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-yellow-300"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-green-300"></span>
+                <span
+                  class="ml-2 truncate rounded-full bg-white px-3 py-1 text-[11px] text-neutral-400 ring-1 ring-neutral-200">utop-kiosk.local</span>
+              </div>
+              <div class="aspect-[599/426] w-full bg-neutral-50">
+                <img src="l1.png"
+                  alt="Waiting for card screen" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+            </div>
+            <div class="mt-4">
+              <span class="text-sm font-bold text-orange-600">01</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Waiting for card</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Idle state at the counter</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col" data-aos style="transition-delay:60ms">
+            <div
+              class="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="flex items-center gap-1.5 border-b border-neutral-100 bg-neutral-50 px-3.5 py-2.5">
+                <span class="h-2.5 w-2.5 rounded-full bg-red-300"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-yellow-300"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-green-300"></span>
+                <span
+                  class="ml-2 truncate rounded-full bg-white px-3 py-1 text-[11px] text-neutral-400 ring-1 ring-neutral-200">utop-kiosk.local</span>
+              </div>
+              <div class="aspect-[599/426] w-full bg-neutral-50">
+                <img  src="l2.png"
+                  alt="Scan to link screen" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+            </div>
+            <div class="mt-4">
+              <span class="text-sm font-bold text-orange-600">02</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Scan to link</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">QR appears, valid for 10s</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col" data-aos style="transition-delay:120ms">
+            <div
+              class="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="flex items-center gap-1.5 border-b border-neutral-100 bg-neutral-50 px-3.5 py-2.5">
+                <span class="h-2.5 w-2.5 rounded-full bg-red-300"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-yellow-300"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-green-300"></span>
+                <span
+                  class="ml-2 truncate rounded-full bg-white px-3 py-1 text-[11px] text-neutral-400 ring-1 ring-neutral-200">utop-kiosk.local</span>
+              </div>
+              <div class="aspect-[599/426] w-full bg-neutral-50">
+                <img  src="l3.png"
+                  alt="Sign in options screen" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+            </div>
+            <div class="mt-4">
+              <span class="text-sm font-bold text-orange-600">03</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Sign in options</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">Phone, Google or Facebook</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col" data-aos style="transition-delay:180ms">
+            <div
+              class="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg shadow-neutral-200/70 ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-orange-200/50">
+              <div class="flex items-center gap-1.5 border-b border-neutral-100 bg-neutral-50 px-3.5 py-2.5">
+                <span class="h-2.5 w-2.5 rounded-full bg-red-300"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-yellow-300"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-green-300"></span>
+                <span
+                  class="ml-2 truncate rounded-full bg-white px-3 py-1 text-[11px] text-neutral-400 ring-1 ring-neutral-200">utop-kiosk.local</span>
+              </div>
+              <div class="aspect-[599/426] w-full bg-neutral-50">
+                <img  src="l4.png"
+                  alt="Enter phone number screen" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+            </div>
+            <div class="mt-4">
+              <span class="text-sm font-bold text-orange-600">04</span>
+              <h3 class="mt-1 text-sm font-semibold text-neutral-900">Enter phone number</h3>
+              <p class="mt-0.5 text-xs text-neutral-500">OTP verification to finish</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-neutral-200 bg-white">
+    <div
+      class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 text-xs text-neutral-500 sm:flex-row lg:px-10">
+      <p>Utop &middot; Super app for rewards, food &amp; payments</p>
+      <p>UI Showcase &mdash; 2026</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
