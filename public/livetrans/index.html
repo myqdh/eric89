@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiveTrans — UI/UX Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dist.css">
+</head>
+<body class="antialiased">
+
+<!-- ======= NAV ======= -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-white/80">
+  <div class="max-w-wrap mx-auto px-6 h-16 flex items-center justify-between">
+    <nav class="hidden md:flex items-center gap-8 text-[13.5px] font-medium text-soft">
+      <a href="#overview" class="hover:text-ink transition-colors">Overview</a>
+      <a href="#journey" class="hover:text-ink transition-colors">Journey</a>
+      <a href="#system" class="hover:text-ink transition-colors">Design System</a>
+      <a href="#admin" class="hover:text-ink transition-colors">Web &amp; Admin</a>
+    </nav>
+    <a href="#journey" class="inline-flex items-center gap-1.5 text-[13px] font-semibold bg-ink text-white px-4 py-2 rounded-full hover:bg-brand transition-colors">
+      View the product
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- ======= HERO ======= -->
+<section id="top" class="relative overflow-hidden pt-40 pb-20 md:pt-48 md:pb-28 bg-cloud">
+  <div class="pointer-events-none absolute -top-32 -right-40 w-[560px] h-[560px] rounded-full bg-brand/25 blur-[110px]"></div>
+  <div class="pointer-events-none absolute top-40 -left-32 w-[420px] h-[420px] rounded-full bg-navy/10 blur-[100px]"></div>
+  <div class="pointer-events-none absolute inset-0 grain opacity-[0.35]"></div>
+
+  <div class="max-w-wrap mx-auto px-6 relative">
+    <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-16 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-1.5 text-[12px] font-semibold tracking-wide text-soft mono uppercase">
+          <span class="relative flex h-1.5 w-1.5"><span class="pulse-dot absolute inline-flex h-full w-full rounded-full bg-brand"></span></span>
+          UI / UX Case Study
+        </div>
+
+        <h1 class="font-heading font-extrabold text-[56px] leading-[0.98] sm:text-[72px] mt-6 tracking-tight">
+          Live<span class="text-brand">Trans</span>
+        </h1>
+
+        <p class="mt-6 text-[18px] leading-relaxed text-soft max-w-[520px]">
+          A live translation app for online meetings and multilingual events - turning speech into captions and translations on screen, in real time.
+        </p>
+
+        <!-- signature waveform -->
+        <div class="mt-9 flex items-center gap-4">
+          <div class="flex items-end gap-[3px] h-8">
+            <span class="wave-bar w-[3px] h-3 bg-brand rounded-full" style="animation-delay:0ms"></span>
+            <span class="wave-bar w-[3px] h-6 bg-brand rounded-full" style="animation-delay:120ms"></span>
+            <span class="wave-bar w-[3px] h-8 bg-brand rounded-full" style="animation-delay:240ms"></span>
+            <span class="wave-bar w-[3px] h-5 bg-brand rounded-full" style="animation-delay:360ms"></span>
+            <span class="wave-bar w-[3px] h-7 bg-brand rounded-full" style="animation-delay:480ms"></span>
+            <span class="wave-bar w-[3px] h-4 bg-brand rounded-full" style="animation-delay:600ms"></span>
+            <span class="wave-bar w-[3px] h-6 bg-brand rounded-full" style="animation-delay:720ms"></span>
+          </div>
+          <span class="text-[13px] text-faint mono">turning speech into captions</span>
+        </div>
+
+        <!-- meta -->
+        <dl class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-[560px] border-t border-line pt-6">
+          <div>
+            <dt class="text-[11px] uppercase tracking-wide text-faint mono">Role</dt>
+            <dd class="mt-1 text-[13.5px] font-semibold">UI/UX Design</dd>
+          </div>
+          <div>
+            <dt class="text-[11px] uppercase tracking-wide text-faint mono">Platform</dt>
+            <dd class="mt-1 text-[13.5px] font-semibold">Web · Mobile Web</dd>
+          </div>
+          <div>
+            <dt class="text-[11px] uppercase tracking-wide text-faint mono">Timeline</dt>
+            <dd class="mt-1 text-[13.5px] font-semibold">2024</dd>
+          </div>
+          <div>
+            <dt class="text-[11px] uppercase tracking-wide text-faint mono">Tools</dt>
+            <dd class="mt-1 text-[13.5px] font-semibold">Figma</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- ============ HERO VECTOR ILLUSTRATION ============ -->
+      <div class="relative mx-auto w-full max-w-[440px] aspect-square select-none" aria-hidden="true">
+
+        <!-- faint dashed orbit path -->
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 440 440" fill="none">
+          <circle cx="220" cy="220" r="178" stroke="#CCCDD0" stroke-width="1.4" stroke-dasharray="2 8" stroke-linecap="round"/>
+          <circle cx="220" cy="220" r="130" stroke="#CCCDD0" stroke-width="1" stroke-dasharray="1 7" opacity="0.6"/>
+        </svg>
+
+        <!-- pulse rings -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="pulse-ring absolute w-28 h-28 rounded-full border-2 border-brand/50" style="animation-delay:0s"></span>
+          <span class="pulse-ring absolute w-28 h-28 rounded-full border-2 border-brand/50" style="animation-delay:0.9s"></span>
+          <span class="pulse-ring absolute w-28 h-28 rounded-full border-2 border-brand/50" style="animation-delay:1.8s"></span>
+        </div>
+
+        <!-- central orb -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="relative w-32 h-32 rounded-full shadow-2xl flex items-center justify-center" style="background:radial-gradient(circle at 32% 28%, #FF7A50, #FF4A1E 60%, #DE3A12 100%)">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1v11M8 5a4 4 0 018 0v3a4 4 0 01-8 0z"/><path d="M5 11a7 7 0 0014 0M12 19v3"/>
+            </svg>
+            <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-white flex items-center justify-center ring-2 ring-brand">
+              <span class="pulse-dot w-2 h-2 rounded-full bg-brand"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- orbiting language chips (cardinal points: right, bottom, left, top) -->
+        <div class="orbit-ring absolute inset-0">
+          <div class="absolute top-1/2 left-1/2" style="transform: rotate(0deg) translate(178px) rotate(0deg);">
+            <div class="orbit-counter -translate-x-1/2 -translate-y-1/2">
+              <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-white shadow-lg border border-line font-heading font-bold text-[13px] text-ink">EN</span>
+            </div>
+          </div>
+          <div class="absolute top-1/2 left-1/2" style="transform: rotate(90deg) translate(178px) rotate(-90deg);">
+            <div class="orbit-counter -translate-x-1/2 -translate-y-1/2">
+              <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-white shadow-lg border border-line font-heading font-bold text-[13px] text-ink">JP</span>
+            </div>
+          </div>
+          <div class="absolute top-1/2 left-1/2" style="transform: rotate(180deg) translate(178px) rotate(-180deg);">
+            <div class="orbit-counter -translate-x-1/2 -translate-y-1/2">
+              <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-white shadow-lg border border-line font-heading font-bold text-[13px] text-ink">VI</span>
+            </div>
+          </div>
+          <div class="absolute top-1/2 left-1/2" style="transform: rotate(270deg) translate(178px) rotate(-270deg);">
+            <div class="orbit-counter -translate-x-1/2 -translate-y-1/2">
+              <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-white shadow-lg border border-line font-heading font-bold text-[13px] text-ink">FR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- floating speech bubbles (parked in the corners, clear of the cardinal orbit points) -->
+        <div class="bob absolute top-4 right-4 bg-white rounded-2xl rounded-br-sm shadow-lg border border-line px-4 py-2.5">
+          <p class="text-[13px] font-semibold text-ink">こんにちは</p>
+        </div>
+        <div class="bob-slow absolute bottom-6 right-4 bg-ink text-white rounded-2xl rounded-br-sm shadow-lg px-4 py-2.5" style="animation-delay:1.2s">
+          <p class="text-[13px] font-semibold">Hello!</p>
+        </div>
+
+        <!-- live caption strip -->
+        <div class="drift absolute bottom-4 left-0 bg-white rounded-2xl shadow-xl border border-line px-4 py-3 flex items-center gap-3 max-w-[220px]">
+          <div class="flex items-end gap-[2.5px] h-5 shrink-0">
+            <span class="wave-bar w-[2.5px] h-2 bg-brand rounded-full" style="animation-delay:0ms"></span>
+            <span class="wave-bar w-[2.5px] h-4 bg-brand rounded-full" style="animation-delay:150ms"></span>
+            <span class="wave-bar w-[2.5px] h-5 bg-brand rounded-full" style="animation-delay:300ms"></span>
+            <span class="wave-bar w-[2.5px] h-3 bg-brand rounded-full" style="animation-delay:450ms"></span>
+          </div>
+          <p class="text-[12px] font-medium text-soft leading-tight">Live captions on<span class="caret text-brand font-bold">_</span></p>
+        </div>
+
+        <!-- small drifting accent shape -->
+        <span class="drift absolute top-4 left-4 w-3 h-3 rounded-sm bg-navy/30" style="animation-delay:0.6s"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= OVERVIEW: PROBLEM + SOLUTION ======= -->
+<section id="overview" class="py-24 md:py-32">
+  <div class="max-w-wrap mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-14 md:gap-20">
+      <div>
+        <span class="text-[12px] font-bold tracking-widest uppercase text-brand mono">The problem</span>
+        <h2 class="font-heading font-bold text-[30px] sm:text-[34px] leading-tight mt-3">
+       Don't let language barriers slow down your meetings.
+        </h2>
+        <p class="mt-5 text-[16px] leading-relaxed text-soft">
+          When audiences speak different languages, slow translation and missing captions cause people to lose track fast. Conversations stall and engagement drops.
+        </p>
+        <p class="mt-4 text-[16px] leading-relaxed text-soft">
+LiveTrans fixes that. It brings real-time captions, instant translation, and live interaction into a single view—all happening live while you speak.
+        </p>
+      </div>
+      <div>
+        <span class="text-[12px] font-bold tracking-widest uppercase text-brand mono">The solution</span>
+        <h2 class="font-heading font-bold text-[30px] sm:text-[34px] leading-tight mt-3">
+          Three pillars of the experience
+        </h2>
+        <div class="mt-6 space-y-4">
+          <div class="flex gap-4 p-5 rounded-2xl border border-line hover:border-brand/40 hover:bg-brand-light/30 transition-colors">
+            <div class="shrink-0 w-10 h-10 rounded-xl bg-ink text-white flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v11M8 5a4 4 0 018 0v3a4 4 0 01-8 0z"/><path d="M5 11a7 7 0 0014 0M12 19v3"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-[15.5px]">Live captions</h3>
+              <p class="mt-1 text-[14px] text-soft leading-relaxed">Speech turns into text and translation instantly, while the speaker is still talking.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 rounded-2xl border border-line hover:border-brand/40 hover:bg-brand-light/30 transition-colors">
+            <div class="shrink-0 w-10 h-10 rounded-xl bg-ink text-white flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-[15.5px]">Q&amp;A &amp; comments</h3>
+              <p class="mt-1 text-[14px] text-soft leading-relaxed">Attendees ask questions, react, and reply right inside the event feed — publicly or privately.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 rounded-2xl border border-line hover:border-brand/40 hover:bg-brand-light/30 transition-colors">
+            <div class="shrink-0 w-10 h-10 rounded-xl bg-ink text-white flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2v2h-2zM14 19h2v2h-2zM19 19h2v2h-2z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-[15.5px]">Join with a QR code</h3>
+              <p class="mt-1 text-[14px] text-soft leading-relaxed">Scan a code to join in seconds — no app install, no complicated sign-up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ======= MOBILE JOURNEY ======= -->
+<section id="journey" class="py-24 md:py-32 bg-cloud overflow-hidden">
+  <div class="max-w-wrap mx-auto px-6">
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-14">
+      <div>
+        <span class="text-[12px] font-bold tracking-widest uppercase text-brand mono">User journey</span>
+        <h2 class="font-heading font-bold text-[30px] sm:text-[36px] leading-tight mt-3 max-w-lg">
+          From joining the room to the closing note
+        </h2>
+      </div>
+      <p class="text-[14.5px] text-soft max-w-sm leading-relaxed">Six key moments in the mobile flow — kept simple so captions stay the main focus of the screen.</p>
+    </div>
+  </div>
+
+  <div class="max-w-wrap mx-auto px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-14">
+
+      <figure class="w-full max-w-[220px] mx-auto">
+        <div class="relative w-[220px] mx-auto">
+          <div class="relative bg-white rounded-2xl p-2 shadow-[0_25px_50px_-18px_rgba(21,22,26,0.35)] ring-1 ring-black/5">
+            <div class="relative rounded-xl overflow-hidden bg-white">
+              <img src="assets/m-profile.png" alt="Profile setup screen" class="w-full h-auto block relative z-0">
+            </div>
+          </div>
+          <span class="absolute -left-[3px] top-16 w-[3px] h-6 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -left-[3px] top-24 w-[3px] h-10 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -right-[3px] top-20 w-[3px] h-12 bg-gray-300 rounded-r-sm"></span>
+        </div>
+        <figcaption class="mt-5"><span class="text-[11px] font-bold text-brand mono">01</span><p class="text-[13.5px] font-semibold mt-1">Set up profile</p><p class="text-[12.5px] text-soft mt-0.5">Display name &amp; preferred language</p></figcaption>
+      </figure>
+
+      <figure class="w-full max-w-[220px] mx-auto">
+        <div class="relative w-[220px] mx-auto">
+          <div class="relative bg-white rounded-2xl p-2 shadow-[0_25px_50px_-18px_rgba(21,22,26,0.35)] ring-1 ring-black/5">
+            <div class="relative rounded-xl overflow-hidden bg-white">
+              <img src="assets/m-waiting.png" alt="Waiting room screen" class="w-full h-auto block relative z-0">
+            </div>
+          </div>
+          <span class="absolute -left-[3px] top-16 w-[3px] h-6 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -left-[3px] top-24 w-[3px] h-10 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -right-[3px] top-20 w-[3px] h-12 bg-gray-300 rounded-r-sm"></span>
+        </div>
+        <figcaption class="mt-5"><span class="text-[11px] font-bold text-brand mono">02</span><p class="text-[13.5px] font-semibold mt-1">Waiting room</p><p class="text-[12.5px] text-soft mt-0.5">Waiting for the talk to start</p></figcaption>
+      </figure>
+
+      <figure class="w-full max-w-[220px] mx-auto">
+        <div class="relative w-[220px] mx-auto">
+          <div class="relative bg-white rounded-2xl p-2 shadow-[0_25px_50px_-18px_rgba(21,22,26,0.35)] ring-1 ring-black/5">
+            <div class="relative rounded-xl overflow-hidden bg-white">
+              <img src="assets/m-captions.png" alt="Live captions screen" class="w-full h-auto block relative z-0">
+            </div>
+          </div>
+          <span class="absolute -left-[3px] top-16 w-[3px] h-6 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -left-[3px] top-24 w-[3px] h-10 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -right-[3px] top-20 w-[3px] h-12 bg-gray-300 rounded-r-sm"></span>
+        </div>
+        <figcaption class="mt-5"><span class="text-[11px] font-bold text-brand mono">03</span><p class="text-[13.5px] font-semibold mt-1">Live captions</p><p class="text-[12.5px] text-soft mt-0.5">Live text &amp; translation</p></figcaption>
+      </figure>
+
+      <figure class="w-full max-w-[220px] mx-auto">
+        <div class="relative w-[220px] mx-auto">
+          <div class="relative bg-white rounded-2xl p-2 shadow-[0_25px_50px_-18px_rgba(21,22,26,0.35)] ring-1 ring-black/5">
+            <div class="relative rounded-xl overflow-hidden bg-white">
+              <img src="assets/m-qa.png" alt="Q&amp;A screen" class="w-full h-auto block relative z-0">
+            </div>
+          </div>
+          <span class="absolute -left-[3px] top-16 w-[3px] h-6 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -left-[3px] top-24 w-[3px] h-10 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -right-[3px] top-20 w-[3px] h-12 bg-gray-300 rounded-r-sm"></span>
+        </div>
+        <figcaption class="mt-5"><span class="text-[11px] font-bold text-brand mono">04</span><p class="text-[13.5px] font-semibold mt-1">Q&amp;A</p><p class="text-[12.5px] text-soft mt-0.5">Filter by all, liked, or personal</p></figcaption>
+      </figure>
+
+      <figure class="w-full max-w-[220px] mx-auto">
+        <div class="relative w-[220px] mx-auto">
+          <div class="relative bg-white rounded-2xl p-2 shadow-[0_25px_50px_-18px_rgba(21,22,26,0.35)] ring-1 ring-black/5">
+            <div class="relative rounded-xl overflow-hidden bg-white">
+              <img src="assets/m-typing.png" alt="Comment composer screen" class="w-full h-auto block relative z-0">
+            </div>
+          </div>
+          <span class="absolute -left-[3px] top-16 w-[3px] h-6 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -left-[3px] top-24 w-[3px] h-10 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -right-[3px] top-20 w-[3px] h-12 bg-gray-300 rounded-r-sm"></span>
+        </div>
+        <figcaption class="mt-5"><span class="text-[11px] font-bold text-brand mono">05</span><p class="text-[13.5px] font-semibold mt-1">Send a comment</p><p class="text-[12.5px] text-soft mt-0.5">Quick replies right in the chat</p></figcaption>
+      </figure>
+
+      <figure class="w-full max-w-[220px] mx-auto">
+        <div class="relative w-[220px] mx-auto">
+          <div class="relative bg-white rounded-2xl p-2 shadow-[0_25px_50px_-18px_rgba(21,22,26,0.35)] ring-1 ring-black/5">
+            <div class="relative rounded-xl overflow-hidden bg-white">
+              <img src="assets/m-thankyou.png" alt="Closing screen" class="w-full h-auto block relative z-0">
+            </div>
+          </div>
+          <span class="absolute -left-[3px] top-16 w-[3px] h-6 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -left-[3px] top-24 w-[3px] h-10 bg-gray-300 rounded-l-sm"></span>
+          <span class="absolute -right-[3px] top-20 w-[3px] h-12 bg-gray-300 rounded-r-sm"></span>
+        </div>
+        <figcaption class="mt-5"><span class="text-[11px] font-bold text-brand mono">06</span><p class="text-[13.5px] font-semibold mt-1">Wrap-up</p><p class="text-[12.5px] text-soft mt-0.5">A closing note ends the session</p></figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= DESIGN SYSTEM ======= -->
+<section id="system" class="py-24 md:py-32">
+  <div class="max-w-wrap mx-auto px-6">
+    <div class="mb-16">
+      <span class="text-[12px] font-bold tracking-widest uppercase text-brand mono">Design System</span>
+      <h2 class="font-heading font-bold text-[30px] sm:text-[36px] leading-tight mt-3 max-w-lg">One consistent system, every platform</h2>
+      <p class="mt-4 text-[15px] text-soft w-full leading-relaxed">Logo, color, and type are standardized so LiveTrans keeps its "on air" feeling across mobile and web.</p>
+    </div>
+
+    <!-- Logo -->
+    <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 mb-6">
+      <div class="rounded-3xl border border-line bg-cloud p-8 flex flex-col justify-between">
+        <h3 class="font-heading font-semibold text-[15px]">Logo</h3>
+        <div class="flex flex-wrap items-center gap-8 mt-8">
+          <img src="assets/logo-full.png" alt="LiveTrans full logo" class="h-12 w-auto">
+          <img src="assets/logo-mark.png" alt="LiveTrans compact mark" class="h-12 w-auto">
+        </div>
+        <p class="mt-8 text-[12.5px] text-faint leading-relaxed">A red broadcast dot + soundwave nod to "recording live" — carried through every logo variant.</p>
+      </div>
+
+      <!-- Typography -->
+      <div class="rounded-3xl border border-line p-8">
+        <h3 class="font-heading font-semibold text-[15px]">Typography</h3>
+        <p class="text-[13px] text-faint mt-1">Noto Sans JP — multilingual support for captions &amp; UI</p>
+        <p class="font-['Noto_Sans_JP'] text-[42px] font-bold mt-6 leading-none">Aa あ字</p>
+        <div class="mt-6 grid grid-cols-3 sm:grid-cols-6 gap-3 text-center">
+          <div class="rounded-lg bg-cloud py-2"><p class="text-[12px] font-['Noto_Sans_JP']">Regular</p></div>
+          <div class="rounded-lg bg-cloud py-2"><p class="text-[12px] font-['Noto_Sans_JP']">Medium</p></div>
+          <div class="rounded-lg bg-cloud py-2"><p class="text-[12px] font-['Noto_Sans_JP']">SemiBold</p></div>
+          <div class="rounded-lg bg-cloud py-2"><p class="text-[12px] font-['Noto_Sans_JP']">Bold</p></div>
+          <div class="rounded-lg bg-cloud py-2"><p class="text-[12px] font-['Noto_Sans_JP']">ExtraBold</p></div>
+          <div class="rounded-lg bg-cloud py-2"><p class="text-[12px] font-['Noto_Sans_JP']">Black</p></div>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-[12px] font-['Noto_Sans_JP']">
+          <span>8px</span><span>10px</span><span>12px</span><span>14px</span><span>16px</span><span>18px</span><span>20px</span><span>24px</span><span>28px</span><span>32px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color -->
+    <div class="rounded-3xl border border-line p-8">
+      <h3 class="font-heading font-semibold text-[15px] mb-6">Color</h3>
+      <div class="grid sm:grid-cols-3 gap-8">
+        <div>
+          <p class="text-[12px] font-semibold text-soft mb-3">Brand</p>
+          <div class="flex gap-3">
+            <div><div class="w-16 h-16 rounded-xl" style="background:#2966FE"></div><p class="mt-2 text-[11px] mono text-faint">Blue<br>#2966FE</p></div>
+            <div><div class="w-16 h-16 rounded-xl" style="background:linear-gradient(135deg,#2966FE,#01B3FF)"></div><p class="mt-2 text-[11px] mono text-faint">Gradient<br>#01B3FF</p></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-soft mb-3">Text</p>
+          <div class="flex gap-3">
+            <div><div class="w-16 h-16 rounded-xl" style="background:#000000"></div><p class="mt-2 text-[11px] mono text-faint">Primary<br>#000000</p></div>
+            <div><div class="w-16 h-16 rounded-xl" style="background:#3A3E44"></div><p class="mt-2 text-[11px] mono text-faint">Subtext 1<br>#3A3E44</p></div>
+            <div><div class="w-16 h-16 rounded-xl" style="background:#535860"></div><p class="mt-2 text-[11px] mono text-faint">Subtext 2<br>#535860</p></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-soft mb-3">Alert &amp; Notifications</p>
+          <div class="flex gap-3 flex-wrap">
+            <div><div class="w-16 h-16 rounded-xl" style="background:#43B97E"></div><p class="mt-2 text-[11px] mono text-faint">Success</p></div>
+            <div><div class="w-16 h-16 rounded-xl" style="background:#FFB300"></div><p class="mt-2 text-[11px] mono text-faint">Warning</p></div>
+            <div><div class="w-16 h-16 rounded-xl" style="background:#F44336"></div><p class="mt-2 text-[11px] mono text-faint">Error</p></div>
+            <div><div class="w-16 h-16 rounded-xl border border-line" style="background:#EBEBEB"></div><p class="mt-2 text-[11px] mono text-faint">Disabled</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-8 mt-8 pt-8 border-t border-line">
+        <div>
+          <p class="text-[12px] font-semibold text-soft mb-3">Background</p>
+          <div class="flex gap-3">
+            <div><div class="w-16 h-16 rounded-xl border border-line" style="background:#EEEEEE"></div><p class="mt-2 text-[11px] mono text-faint">#EEEEEE</p></div>
+            <div><div class="w-16 h-16 rounded-xl border border-line" style="background:#F8F8F8"></div><p class="mt-2 text-[11px] mono text-faint">#F8F8F8</p></div>
+            <div><div class="w-16 h-16 rounded-xl border border-line" style="background:#FAFAFA"></div><p class="mt-2 text-[11px] mono text-faint">#FAFAFA</p></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-soft mb-3">Border</p>
+          <div class="w-16 h-16 rounded-xl" style="background:#CCCDD0"></div><p class="mt-2 text-[11px] mono text-faint">#CCCDD0</p>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-soft mb-3">Icon</p>
+          <div class="w-16 h-16 rounded-xl" style="background:#4E4E56"></div><p class="mt-2 text-[11px] mono text-faint">#4E4E56</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======= WEB & ADMIN ======= -->
+<section id="admin" class="py-24 md:py-32 bg-cloud">
+  <div class="max-w-wrap mx-auto px-6">
+    <div class="mb-14">
+      <span class="text-[12px] font-bold tracking-widest uppercase text-brand mono">Web &amp; Admin</span>
+      <h2 class="font-heading font-bold text-[30px] sm:text-[36px] leading-tight mt-3 max-w-lg">Running events from the browser</h2>
+      <p class="mt-4 text-[15px] text-soft max-w-xl leading-relaxed">Organizers create events, set display languages, and follow live comments — all from one lightweight dashboard.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- big feature: comments panel -->
+      <div class="md:col-span-2 rounded-3xl border border-line bg-white p-6 sm:p-8">
+        <div class="grid lg:grid-cols-[1.3fr_1fr] gap-8 items-center">
+          <div class="browser-frame">
+            <div class="h-7 bg-[#EDEDEA] flex items-center gap-1.5 px-3">
+              <span class="w-2 h-2 rounded-full bg-[#FF5F57]"></span><span class="w-2 h-2 rounded-full bg-[#FEBC2E]"></span><span class="w-2 h-2 rounded-full bg-[#28C840]"></span>
+            </div>
+            <img src="assets/d-comments.png" alt="Event screen with live comment feed on web" class="w-full h-auto block">
+          </div>
+          <div>
+            <span class="text-[11px] font-bold text-brand mono">EVENT ROOM</span>
+            <h3 class="font-heading font-semibold text-[22px] mt-2">Transcript and comments, side by side</h3>
+            <p class="mt-3 text-[14.5px] text-soft leading-relaxed">The left column logs every caption by timestamp; the right column is where viewers talk in real time — so organizers can follow both the content and the reaction at once.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- QR join -->
+      <div class="rounded-3xl border border-line bg-white p-6 sm:p-8">
+        <div class="browser-frame mb-6 max-w-[360px] mx-auto">
+          <div class="h-7 bg-[#EDEDEA] flex items-center gap-1.5 px-3">
+            <span class="w-2 h-2 rounded-full bg-[#FF5F57]"></span><span class="w-2 h-2 rounded-full bg-[#FEBC2E]"></span><span class="w-2 h-2 rounded-full bg-[#28C840]"></span>
+          </div>
+          <img src="assets/d-qr.png" alt="QR code join screen" class="w-full h-auto block">
+        </div>
+        <span class="text-[11px] font-bold text-brand mono">JOIN</span>
+        <h3 class="font-heading font-semibold text-[17px] mt-2">One scan to get in</h3>
+        <p class="mt-2 text-[14px] text-soft leading-relaxed">The QR code sits next to a friendly loading illustration — softening the wait while the room isn't open yet.</p>
+      </div>
+
+      <!-- create event modal -->
+      <div class="rounded-3xl border border-line bg-white p-6 sm:p-8">
+        <div class="browser-frame mb-6 max-w-[360px] mx-auto">
+          <div class="h-7 bg-[#EDEDEA] flex items-center gap-1.5 px-3">
+            <span class="w-2 h-2 rounded-full bg-[#FF5F57]"></span><span class="w-2 h-2 rounded-full bg-[#FEBC2E]"></span><span class="w-2 h-2 rounded-full bg-[#28C840]"></span>
+          </div>
+          <img src="assets/d-create-event.png" alt="Create event modal with language settings" class="w-full h-auto block">
+        </div>
+        <span class="text-[11px] font-bold text-brand mono">SETUP</span>
+        <h3 class="font-heading font-semibold text-[17px] mt-2">Pick languages right at creation</h3>
+        <p class="mt-2 text-[14px] text-soft leading-relaxed">Organizers set the spoken language and the default display language per event, with support for multiple languages at once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CLOSING CTA ======= -->
+<section class="py-24 md:py-32">
+  <div class="max-w-wrap mx-auto px-6">
+    <div class="relative rounded-[32px] bg-ink text-white overflow-hidden px-8 py-16 sm:px-16 sm:py-20">
+      <div class="pointer-events-none absolute -top-24 -right-24 w-[380px] h-[380px] rounded-full bg-brand/30 blur-[100px]"></div>
+      <div class="pointer-events-none absolute -bottom-24 -left-24 w-[320px] h-[320px] rounded-full bg-navy/30 blur-[100px]"></div>
+      <div class="relative w-full">
+        <span class="text-[12px] font-bold tracking-widest uppercase text-brand mono">Result</span>
+        <h2 class="font-heading font-bold text-[30px] sm:text-[38px] leading-tight mt-4">
+          A tight, consistent system built to speak many languages
+        </h2>
+        <p class="mt-5 text-[15.5px] text-white/70 leading-relaxed">
+          From onboarding to the admin dashboard, LiveTrans keeps one visual language throughout — so captions, not the interface, stay the first thing viewers notice.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer class="border-t border-line py-10">
+  <div class="max-w-wrap mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <span class="relative flex h-2 w-2"><span class="pulse-dot absolute inline-flex h-full w-full rounded-full bg-brand"></span></span>
+      <span class="font-heading font-semibold text-[13.5px]">LiveTrans — UI/UX Case Study</span>
+    </div>
+    <p class="text-[12.5px] text-faint">A design exploration of the product system &amp; user flow.</p>
+  </div>
+</footer>
+
+</body>
+</html>

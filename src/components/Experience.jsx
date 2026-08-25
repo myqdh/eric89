@@ -121,7 +121,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                     <div className="flex items-center gap-2">
                       <BookText size={15} className="text-ember" />
                       <h3 className="text-base font-semibold text-gray-900 tracking-wide">
-                        Ohmyhotel — UI/UX Case Study
+                        Ohmyhotel — Case Study
                       </h3>
                     </div>
                     <div className="flex sm:justify-end">
@@ -140,7 +140,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                   </div>
                 )}
 
-                {(item.company === "FPT Software" || item.company === "FPT So") && (
+                {(item.company === "FPT Software") && (
                   <div className="mt-6 grid sm:grid-cols-2 gap-5 border border-line bg-paper p-5 items-center">
                     <div className="flex items-center gap-2">
                       <BookText size={15} className="text-ember" />
@@ -151,6 +151,29 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                     <div className="flex sm:justify-end">
                       <a
                         href="/utop/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 transition-colors group"
+                      >
+                        <span>Explore Project</span>
+                        <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                )}
+                 {(item.company === "Bravesoft") && (
+                  <div className="mt-6 grid sm:grid-cols-2 gap-5 border border-line bg-paper p-5 items-center">
+                    <div className="flex items-center gap-2">
+                      <BookText size={15} className="text-ember" />
+                      <h3 className="text-base font-semibold text-gray-900 tracking-wide">
+                        LiveTrans - Case Study
+                      </h3>
+                    </div>
+                    <div className="flex sm:justify-end">
+                      <a
+                        href="/livetrans/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 transition-colors group"
