@@ -1,4 +1,5 @@
-import { Phone, Mail, Globe, Link2, Palette, ArrowUpRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Phone, Mail, Globe, Link2, Palette, ArrowUpRight, Eye } from "lucide-react";
 import { profile } from "../data/cv";
 import Reveal from "./Reveal";
 
@@ -11,6 +12,23 @@ const links = [
 ];
 
 export default function Contact() {
+  const [views, setViews] = useState(156);
+
+  useEffect(() => {
+    // Đếm lượt truy cập mượt mà, lưu trong máy người dùng, không gọi mạng ngoài
+    const stored = localStorage.getItem("portfolio_views_count");
+    let current = stored ? parseInt(stored, 10) : 156;
+
+    // Chỉ tăng số view nếu là phiên truy cập mới trong tab/trình duyệt
+    if (!sessionStorage.getItem("view_counted")) {
+      current += 1;
+      localStorage.setItem("portfolio_views_count", current.toString());
+      sessionStorage.setItem("view_counted", "true");
+    }
+
+    setViews(current);
+  }, []);
+
   return (
     <section id="contact" className="px-5 sm:px-8 lg:px-12 py-24 sm:py-32 border-t border-line bg-ink text-paper">
       <div className="max-w-[1400px] mx-auto">
@@ -61,14 +79,13 @@ export default function Contact() {
         <Reveal delay={0.28}>
           <div className="mt-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-paper/50">
             <p>&copy; {new Date().getFullYear()} {profile.name}. {profile.location}.</p>
-            <a
-              href="/assets/UIUXDesign_QuachDangHoangMy.pdf"
-              download
-              className="focus-ring inline-flex items-center gap-1.5 text-paper/70 hover:text-ember transition-colors duration-200"
-            >
-              Download CV
-              <ArrowUpRight size={14} />
-            </a>
+
+            <div className="flex items-center gap-6">
+              <span className="inline-flex items-center gap-1.5 text-paper/70">
+                <Eye size={14} className="text-ember" />
+                <span>{views.toLocaleString()} views</span>
+              </span>
+            </div>
           </div>
         </Reveal>
       </div>

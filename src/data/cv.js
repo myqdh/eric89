@@ -101,7 +101,7 @@ export const experience = [
     keyProject:
       "Enterprise & AI solutions: AI document generation tool, Bidirectional translation system (Live Connect), Tokyo Metro fax-replacement system\n\nBranding & marketing: Bravesoft website, Eventos event materials, Safie Campaign poster.",
     keyAchievement:
-      "Delivered high-quality graphic design assets for Japanese clients, maintaining 100% on-time delivery and strict adherence to localized brand guidelines.\n\nCollaberated with cross-functional teams to design and successfully launch key enterprise products, including an AI document-generation tool, a bidirectional translation system, Tokyo Metro s fax-replacement system.",
+      "Delivered high-quality graphic design assets for Japanese clients, maintaining 100% on-time delivery and strict adherence to localized brand guidelines.\n\nCollaberated with cross-functional teams to design and successfully launch key enterprise products, including an AI document-generation tool, a bidirectional translation system, Tokyo Metro fax-replacement system.",
   },
   {
     company: "FPT Software",
