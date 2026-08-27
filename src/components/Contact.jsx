@@ -12,12 +12,12 @@ const links = [
 ];
 
 export default function Contact() {
-  const [views, setViews] = useState(156);
+  const [views, setViews] = useState(2);
 
   useEffect(() => {
     // Đếm lượt truy cập mượt mà, lưu trong máy người dùng, không gọi mạng ngoài
     const stored = localStorage.getItem("portfolio_views_count");
-    let current = stored ? parseInt(stored, 10) : 156;
+    let current = stored ? parseInt(stored, 10) : 2;
 
     // Chỉ tăng số view nếu là phiên truy cập mới trong tab/trình duyệt
     if (!sessionStorage.getItem("view_counted")) {
