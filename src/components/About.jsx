@@ -84,14 +84,14 @@ export default function About() {
             {/* animated gradient border + subtle cursor tilt */}
             <div
               ref={frameRef}
-              className="relative rounded-[26px] p-[3px] transition-transform duration-300 ease-out animate-[ab-borderShift_7s_ease-in-out_infinite]"
+              className="relative    p-[3px] transition-transform duration-300 ease-out animate-[ab-borderShift_7s_ease-in-out_infinite]"
               style={{
                 background:
                   "linear-gradient(155deg, rgba(239,90,42,0.55), rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(239,90,42,0.35))",
                 transformStyle: "preserve-3d",
               }}
             >
-              <div className="relative rounded-[24px] overflow-hidden">
+              <div className="relative overflow-hidden">
                 <img
                   src="/assets/portrait.jpg"
                   alt={`Portrait of ${profile.name}`}
@@ -104,26 +104,26 @@ export default function About() {
 
                 {/* corner scan brackets — AI recognition motif */}
                 <span
-                  className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-ember rounded-tl-md animate-[ab-bracketPulse_3.2s_ease-in-out_infinite]"
+                  className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite]"
                   aria-hidden
                 />
                 <span
-                  className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-ember rounded-tr-md animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.3s]"
+                  className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.3s]"
                   aria-hidden
                 />
                 <span
-                  className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-ember rounded-bl-md animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.6s]"
+                  className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-ember animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.6s]"
                   aria-hidden
                 />
                 <span
-                  className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-ember rounded-br-md animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.9s]"
+                  className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.9s]"
                   aria-hidden
                 />
 
                 {/* experience badge — replaces the flat black tag */}
-                <div className="absolute left-4 bottom-4 flex items-center gap-2.5 rounded-full bg-white/70 backdrop-blur-md border border-paper/15 pl-2.5 pr-4 py-2 animate-[ab-float_5.5s_ease-in-out_infinite]">
+                <div className="absolute left-4 bottom-4 flex items-center gap-2.5  bg-white/70 backdrop-blur-md border border-paper/15 pl-2.5 pr-4 py-2 animate-[ab-float_5.5s_ease-in-out_infinite]">
                   {expNumber && (
-                    <span className="flex items-center justify-center w-7 h-7 rounded-full bg-ember from-ember to-ember/60 text-[11px] font-extrabold text-paper">
+                    <span className="flex items-center justify-center w-7 h-7  bg-ember from-ember to-ember/60 text-[11px] font-extrabold text-paper">
                       {expNumber}
                     </span>
                   )}
