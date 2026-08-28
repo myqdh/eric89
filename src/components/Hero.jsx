@@ -75,16 +75,6 @@ export default function Hero() {
               >
                 {profile.experienceLine} in UI/UX Design, Product Design &amp; Visual Design.
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="flex items-center gap-2 text-sm font-medium text-ink/80 shrink-0"
-              >
-                <MapPin size={16} className="text-ember shrink-0" />
-                {profile.location}
-              </motion.div>
             </div>
           </div>
 

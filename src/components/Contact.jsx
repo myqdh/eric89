@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, Mail, Globe, Link2, Palette, ArrowUpRight, Eye } from "lucide-react";
+import { Phone, Mail, Globe, Link2, Palette, ArrowUpRight, Eye, MapPin } from "lucide-react";
 import { profile } from "../data/cv";
 import Reveal from "./Reveal";
 
