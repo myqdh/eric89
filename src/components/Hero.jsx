@@ -67,14 +67,14 @@ export default function Hero() {
             </motion.h1>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 sm:gap-8">
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="max-w-md text-base sm:text-lg text-muted leading-relaxed"
               >
                 {profile.experienceLine} in UI/UX Design, Product Design &amp; Visual Design.
-              </motion.p>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
