@@ -93,7 +93,7 @@ export default function About() {
             >
               <div className="relative overflow-hidden">
                 <img
-                  src="/assets/portrait.jpg"
+                  src="/assets/portrait.png"
                   alt={`Portrait of ${profile.name}`}
                   width={520}
                   height={520}
