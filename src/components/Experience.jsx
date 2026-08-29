@@ -92,7 +92,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                 </ul>
 
                 <div className="mt-6 grid sm:grid-cols-2 gap-5">
-                  <div className="bg-paper-warm border border-line p-4 sm:p-5">
+                  <div className="bg-paper-warm rounded-xl p-4 sm:p-5">
                     <div className="flex items-center gap-2 mb-2">
                       <Target size={15} className="text-ember" />
                       <span className="text-xs font-bold uppercase tracking-widest text-ink/70">
@@ -103,7 +103,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                       {item.keyProject}
                     </p>
                   </div>
-                  <div className="bg-paper-warm border border-line p-4 sm:p-5">
+                  <div className="bg-paper-warm rounded-xl p-4 sm:p-5">
                     <div className="flex items-center gap-2 mb-2">
                       <Trophy size={15} className="text-ember" />
                       <span className="text-xs font-bold uppercase tracking-widest text-ink/70">
@@ -117,7 +117,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                 </div>
 
                 {item.company === "Ohmyhotel" && (
-                  <div className="mt-6 grid sm:grid-cols-2 gap-5 border border-line bg-paper p-5 items-center">
+                  <div className="mt-6 grid sm:grid-cols-2 gap-5 rounded-xl border border-line bg-paper p-5 items-center">
                     <div className="flex items-center gap-2">
                       <BookText size={15} className="text-ember" />
                       <h3 className="text-base font-semibold text-gray-900 tracking-wide">
@@ -141,7 +141,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                 )}
 
                 {(item.company === "FPT Software") && (
-                  <div className="mt-6 grid sm:grid-cols-2 gap-5 border border-line bg-paper p-5 items-center">
+                  <div className="mt-6 grid sm:grid-cols-2 gap-5 rounded-xl border border-line bg-paper p-5 items-center">
                     <div className="flex items-center gap-2">
                       <BookText size={15} className="text-ember" />
                       <h3 className="text-base font-semibold text-gray-900 tracking-wide">
@@ -164,7 +164,7 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                   </div>
                 )}
                  {(item.company === "Bravesoft") && (
-                  <div className="mt-6 grid sm:grid-cols-2 gap-5 border border-line bg-paper p-5 items-center">
+                  <div className="mt-6 grid sm:grid-cols-2 gap-5 rounded-xl border border-line bg-paper p-5 items-center">
                     <div className="flex items-center gap-2">
                       <BookText size={15} className="text-ember" />
                       <h3 className="text-base font-semibold text-gray-900 tracking-wide">

@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Education() {
   return (
-    <section id="education" className="px-5 sm:px-8 lg:px-12 py-20 sm:py-28 border-t border-line">
+    <section id="education" className="px-5 sm:px-8 lg:px-12 py-20 sm:py-28">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20">
         <div>
           <Reveal>
@@ -41,7 +41,7 @@ export default function Education() {
                 as="li"
                 key={c}
                 delay={i * 0.08}
-                className="flex items-center gap-3 border border-line bg-paper-warm px-5 py-4"
+                className="flex items-center gap-3  rounded-xl   bg-paper-warm px-5 py-4"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-ember shrink-0" aria-hidden />
                 <span className="text-base sm:text-lg font-medium">{c}</span>

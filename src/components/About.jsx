@@ -84,7 +84,7 @@ export default function About() {
             {/* animated gradient border + subtle cursor tilt */}
             <div
               ref={frameRef}
-              className="relative    p-[3px] transition-transform duration-300 ease-out animate-[ab-borderShift_7s_ease-in-out_infinite]"
+              className="relative  rounded-3xl  p-[2px] transition-transform duration-300 ease-out animate-[ab-borderShift_7s_ease-in-out_infinite]"
               style={{
                 background:
                   "linear-gradient(155deg, rgba(239,90,42,0.55), rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(239,90,42,0.35))",
@@ -98,36 +98,36 @@ export default function About() {
                   width={520}
                   height={520}
                   loading="lazy"
-                  className="w-full aspect-square object-cover"
+                  className="w-full rounded-3xl aspect-square object-cover"
                 />
 
 
                 {/* corner scan brackets — AI recognition motif */}
                 <span
-                  className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite]"
+                  className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite]"
                   aria-hidden
                 />
                 <span
-                  className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.3s]"
+                  className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.3s]"
                   aria-hidden
                 />
                 <span
-                  className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-ember animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.6s]"
+                  className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-ember animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.6s]"
                   aria-hidden
                 />
                 <span
-                  className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.9s]"
+                  className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-ember  animate-[ab-bracketPulse_3.2s_ease-in-out_infinite] [animation-delay:.9s]"
                   aria-hidden
                 />
 
                 {/* experience badge — replaces the flat black tag */}
-                <div className="absolute left-4 bottom-4 flex items-center gap-2.5  bg-white/70 backdrop-blur-md border border-paper/15 pl-2.5 pr-4 py-2 animate-[ab-float_5.5s_ease-in-out_infinite]">
+                <div className="absolute rounded-xl left-8 bottom-8 flex items-center gap-2.5  bg-black/70 backdrop-blur-md  pl-2.5 pr-4 py-2 animate-[ab-float_5.5s_ease-in-out_infinite]">
                   {expNumber && (
-                    <span className="flex items-center justify-center w-7 h-7  bg-ember from-ember to-ember/60 text-[11px] font-extrabold text-paper">
+                    <span className="flex items-center justify-center w-7 h-7 rounded-lg  bg-ember from-ember to-ember/60 text-[12px] font-extrabold text-paper">
                       {expNumber}
                     </span>
                   )}
-                  <span className="text-ink text-[11px] font-bold uppercase tracking-wider leading-tight">
+                  <span className="text-white text-[11px] font-bold uppercase tracking-wider leading-tight">
                     {expLabel}
                   </span>
                 </div>
@@ -159,7 +159,7 @@ export default function About() {
             </span>
           </Reveal>
           <Reveal delay={0.12}>
-            <p className="mt-5 text-2xl sm:text-3xl lg:text-4xl font-medium leading-snug tracking-tight max-w-3xl">
+            <p className="mt-5 text-2xl sm:text-3xl lg:text-3xl font-medium leading-snug tracking-tight max-w-3xl">
               {summary}
             </p>
           </Reveal>
@@ -172,7 +172,7 @@ export default function About() {
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
                     rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="focus-ring group inline-flex items-center gap-2 border border-line bg-paper/60 backdrop-blur-sm px-4 py-2 text-sm font-medium text-ink/75 hover:text-ember hover:border-ember/50 transition-colors duration-200"
+                    className="focus-ring group inline-flex items-center gap-2  rounded-full border border-line bg-paper/60 backdrop-blur-sm px-4 py-2 text-sm font-medium text-ink/75 hover:text-ember hover:border-ember/50 transition-colors duration-200"
                   >
                     <Icon size={16} strokeWidth={1.8} className="text-ember shrink-0" />
                     <span>{label}</span>

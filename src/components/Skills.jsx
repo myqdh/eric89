@@ -13,7 +13,7 @@ function TagGroup({ icon: Icon, title, items }) {
         {items.map((item) => (
           <span
             key={item}
-            className="px-4 py-2 text-sm font-medium border border-line bg-paper hover:border-ember hover:text-ember transition-colors duration-200 cursor-default"
+            className="px-4 py-2 text-sm font-medium rounded-full bg-paper hover:border-ember hover:text-ember transition-colors duration-200 cursor-default"
           >
             {item}
           </span>
@@ -25,7 +25,7 @@ function TagGroup({ icon: Icon, title, items }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-5 sm:px-8 lg:px-12 py-20 sm:py-28 border-t border-line bg-paper-warm">
+    <section id="skills" className="px-5 sm:px-8 lg:px-12 py-20 sm:py-28 bg-paper-warm">
       <div className="max-w-[1400px] mx-auto">
         <Reveal>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-12 sm:mb-16">
@@ -45,7 +45,7 @@ export default function Skills() {
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-2xl">
             {languages.map((lang) => (
-              <div key={lang.name} className="border border-line bg-paper p-5">
+              <div key={lang.name} className="rounded-xl bg-paper p-5">
                 <p className="text-lg font-bold mb-1">{lang.name}</p>
                 <p className="text-sm text-ink/70">{lang.detail}</p>
                 {lang.detail2 && (

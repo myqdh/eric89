@@ -95,7 +95,7 @@ export default function Nav() {
           <a
             href="/assets/UIUXDesign_QuachDangHoangMy.pdf"
             download
-            className="focus-ring inline-flex items-center gap-1.5 text-sm font-semibold border border-ink px-4 py-2 hover:bg-ink hover:text-paper transition-colors duration-200"
+            className="focus-ring inline-flex items-center gap-1.5 text-sm font-semibold rounded-full border border-ink px-4 py-2 hover:bg-ink hover:text-paper transition-colors duration-200"
           >
             Download CV
             <ArrowUpRight size={15} strokeWidth={2.2} />
