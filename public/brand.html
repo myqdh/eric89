@@ -8,67 +8,67 @@
 <style>
   :root{
     --paper:#FAF9F6;
+    --surface:#FFFFFF;
+    --tint:#F4F2ED;
     --ink:#121416;
     --muted:#676A6F;
     --accent:#F56D24;
     --accent-2:#FF3700;
-    --line:rgba(18,20,22,0.10);
+    --line:rgba(18,20,22,0.09);
+    --radius-lg:22px;
+    --radius-md:16px;
+    --shadow-sm:0 2px 8px rgba(18,20,22,0.04);
+    --shadow-md:0 20px 40px -24px rgba(18,20,22,0.22);
+    --shadow-lg:0 30px 60px -28px rgba(18,20,22,0.28);
   }
   *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   html,body{margin:0;padding:0;}
   body{
     background:var(--paper);
     font-family:-apple-system,"Inter","Segoe UI",Helvetica,Arial,sans-serif;
     color:var(--ink);
+    -webkit-font-smoothing:antialiased;
   }
-  .poster{
-    width:100%;
-    margin:0 auto;
-    background:var(--paper);
-    position:relative;
-  }
+  img,svg{ display:block; max-width:100%; }
 
-  /* ===== HERO / OVERVIEW ===== */
-  .hero{ position:relative; padding:clamp(32px,6vw,56px) clamp(20px,6vw,64px) clamp(40px,7vw,70px); overflow:hidden; }
+  .poster{ width:100%; margin:0 auto; background:var(--paper); position:relative; }
+  .wrap{ max-width:1240px; margin:0 auto; padding-inline:clamp(20px,5vw,64px); }
+
+  /* ===================== HERO ===================== */
+  .hero{ position:relative; overflow:hidden; padding-block:clamp(56px,9vw,100px); }
   .hero-mesh{
     position:absolute; inset:0;
     background:
-      radial-gradient(60% 70% at 82% 8%, rgba(245,109,36,0.16), transparent 60%),
-      radial-gradient(45% 55% at 8% 95%, rgba(255,55,0,0.08), transparent 60%);
+      radial-gradient(55% 65% at 84% 6%, rgba(245,109,36,0.14), transparent 62%),
+      radial-gradient(42% 50% at 6% 100%, rgba(255,55,0,0.07), transparent 62%);
     pointer-events:none;
   }
   .kicker{
-    display:flex; align-items:center; justify-content:space-between;
-    font-size:13px; font-weight:500; 
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px;
+    font-size:0.8125rem; font-weight:700; letter-spacing:.16em;
     color:var(--muted); text-transform:uppercase;
-    margin-bottom:60px; position:relative; z-index:1;
+    margin-bottom:clamp(40px,7vw,72px); position:relative; z-index:1;
   }
   .kicker .dot{ display:inline-flex; align-items:center; gap:8px; color:var(--ink); }
   .kicker .dot i{ width:7px; height:7px; border-radius:50%; background:var(--accent); display:inline-block; }
 
-  .hero-grid{ position:relative; z-index:1; display:grid; grid-template-columns: 1fr auto; align-items:center; gap:40px; }
-  .hero-statement{ font-size:clamp(30px,3.8vw,50px); font-weight:800; line-height:1.16; letter-spacing:-0.01em; max-width:600px; }
+  .hero-grid{ position:relative; z-index:1; display:grid; grid-template-columns:1.1fr 0.9fr; align-items:center; gap:clamp(32px,6vw,56px); }
+  .hero-statement{ font-size:clamp(2rem,4.2vw,3.25rem); font-weight:800; line-height:1.12; letter-spacing:-0.02em; max-width:600px; }
   .hero-statement .em{
     background:linear-gradient(120deg,var(--accent),var(--accent-2));
     -webkit-background-clip:text; background-clip:text; color:transparent;
   }
-  .hero-sub{ margin-top:18px; font-size:1.1875rem; line-height:1.7; color:var(--muted); }
+  .hero-sub{ margin-top:20px; font-size:1.125rem; line-height:1.7; color:var(--muted); max-width:440px; }
 
-  .hero-visual{
-    position:relative;
-    display:flex; align-items:center; justify-content:center;
-    padding:30px;
-  }
+  .hero-visual{ position:relative; display:flex; align-items:center; justify-content:center; padding:clamp(16px,4vw,32px); }
   .hv-halo{
-    position:absolute;
-    width:290px; height:290px;
-    border-radius:50%;
+    position:absolute; width:min(72vw,300px); height:min(72vw,300px); border-radius:50%;
     background:conic-gradient(from 0deg, rgba(245,109,36,0) 0deg, rgba(245,109,36,0.30) 60deg, rgba(255,55,0,0) 140deg, rgba(245,109,36,0.20) 260deg, rgba(245,109,36,0) 360deg);
-    filter:blur(16px);
-    animation:hv-spin 10s linear infinite;
+    filter:blur(16px); animation:hv-spin 10s linear infinite;
   }
   @keyframes hv-spin{ to{ transform:rotate(360deg); } }
-  .hv-dots{ position:absolute; inset:-14px; opacity:.55; }
+  .hv-dots{ position:absolute; inset:-14px; opacity:.55; width:100%; height:auto; }
   .hv-dots circle{ animation:hv-pulse 3.2s ease-in-out infinite; transform-origin:center; }
   .hv-dots circle:nth-child(2){ animation-delay:.5s; }
   .hv-dots circle:nth-child(3){ animation-delay:1s; }
@@ -76,210 +76,168 @@
   @keyframes hv-pulse{ 0%,100%{ opacity:.3; transform:scale(1); } 50%{ opacity:1; transform:scale(1.6); } }
 
   .hero-mark{
-    position:relative;
-    z-index:1;
-    display:flex; align-items:center;
-    padding:26px 34px;
-    background:#fff;
-    border-radius:18px;
-    box-shadow:
-      0 30px 50px -20px rgba(18,20,22,0.28),
-      0 3px 0 rgba(255,255,255,0.7) inset;
-    transform:rotate(-1.4deg);
-    transition:transform .35s ease;
+    position:relative; z-index:1;
+    display:flex; align-items:center; max-width:100%;
+    padding:clamp(18px,3vw,26px) clamp(22px,4vw,34px);
+    background:var(--surface); border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-lg), 0 3px 0 rgba(255,255,255,0.7) inset;
+    transform:rotate(-1.2deg); transition:transform .35s ease;
   }
   .hero-mark:hover{ transform:rotate(0deg) translateY(-3px); }
+  .hero-mark svg{ width:min(280px,42vw); height:auto; }
 
   .hv-orb{
-    position:absolute;
-    top:-14px; right:-14px;
-    z-index:2;
-    width:36px; height:36px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.85);
-    backdrop-filter:blur(8px);
-    border:1px solid rgba(255,255,255,0.9);
-    box-shadow:0 12px 22px -8px rgba(18,20,22,0.3);
+    position:absolute; top:-14px; right:-14px; z-index:2;
+    width:36px; height:36px; border-radius:50%;
+    background:rgba(255,255,255,0.85); backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.9); box-shadow:0 12px 22px -8px rgba(18,20,22,0.3);
     display:flex; align-items:center; justify-content:center;
   }
-  .hv-orb .ring{
-    position:absolute; inset:0; border-radius:50%;
-    border:1.4px dashed rgba(245,109,36,0.5);
-    animation:hv-spin 7s linear infinite;
-  }
-  .hv-orb .core{
-    width:7px; height:7px; border-radius:50%;
-    background:var(--accent);
-    animation:hv-ripple 1.8s ease-out infinite;
-  }
-  @keyframes hv-ripple{
-    0%{ box-shadow:0 0 0 0 rgba(245,109,36,.5); }
-    70%{ box-shadow:0 0 0 8px rgba(245,109,36,0); }
-    100%{ box-shadow:0 0 0 0 rgba(245,109,36,0); }
-  }
+  .hv-orb .ring{ position:absolute; inset:0; border-radius:50%; border:1.4px dashed rgba(245,109,36,0.5); animation:hv-spin 7s linear infinite; }
+  .hv-orb .core{ width:7px; height:7px; border-radius:50%; background:var(--accent); animation:hv-ripple 1.8s ease-out infinite; }
+  @keyframes hv-ripple{ 0%{box-shadow:0 0 0 0 rgba(245,109,36,.5);} 70%{box-shadow:0 0 0 8px rgba(245,109,36,0);} 100%{box-shadow:0 0 0 0 rgba(245,109,36,0);} }
 
   .hv-tag{
-    position:absolute;
-    bottom:-14px; left:20px;
-    z-index:2;
+    position:absolute; bottom:-14px; left:20px; z-index:2;
     display:flex; align-items:center; gap:6px;
-    background:var(--ink);
-    color:#fff;
-    font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
-    padding:7px 12px;
-    border-radius:100px;
-    box-shadow:0 12px 22px -8px rgba(18,20,22,0.35);
+    background:var(--ink); color:#fff;
+    font-size:0.6875rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+    padding:7px 12px; border-radius:100px; box-shadow:0 12px 22px -8px rgba(18,20,22,0.35);
   }
   .hv-tag i{ width:6px; height:6px; border-radius:50%; background:var(--accent); display:inline-block; }
 
-  /* ===== SECTION SHELL ===== */
-  .section{ padding: clamp(56px, 9vw, 96px) clamp(20px, 6vw, 64px);}
+  /* ===================== SECTION SHELL ===================== */
+  .section{ padding-block:clamp(48px,8vw,88px); }
   .section-title{
     display:flex; align-items:center; gap:10px;
-    font-size:16px; font-weight:700; text-transform:uppercase;
-    color:var(--ink); margin:0 0 26px;
+    font-size:clamp(1.25rem,2vw,1.5rem); font-weight:700; letter-spacing:-0.01em;
+    color:var(--ink); margin:0 0 clamp(24px,4vw,36px);
   }
-  .section-title::before{ content:""; width:8px; height:8px; background:var(--accent); display:inline-block; border-radius:2px; }
+  .section-title::before{ content:""; width:9px; height:9px; background:var(--accent); display:inline-block; border-radius:3px; flex:none; }
 
-  /* ===== BRAND VALUES ===== */
+  /* ===================== BRAND VALUES ===================== */
   .values{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
   .value{
-    position:relative;
-    padding:24px 20px 22px;
-    border:1px solid var(--line);
-    border-radius:18px;
-    background:#fff;
-    overflow:hidden;
+    position:relative; padding:26px 22px 24px;
+    border:1px solid var(--line); border-radius:var(--radius-md);
+    background:var(--surface); overflow:hidden;
     transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
   }
-  .value:hover{
-    transform:translateY(-4px);
-    box-shadow:0 20px 34px -18px rgba(18,20,22,0.25);
-    border-color:rgba(245,109,36,0.35);
-  }
+  .value:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:rgba(245,109,36,0.3); }
   .value::before{
-    content:"";
-    position:absolute; top:-30px; right:-30px;
-    width:90px; height:90px; border-radius:50%;
-    background:radial-gradient(circle, rgba(245,109,36,0.14), transparent 70%);
-    pointer-events:none;
+    content:""; position:absolute; top:-30px; right:-30px; width:90px; height:90px; border-radius:50%;
+    background:radial-gradient(circle, rgba(245,109,36,0.13), transparent 70%); pointer-events:none;
   }
-  .value .no{
-    position:absolute; top:16px; right:18px;
-    font-size:11px; font-weight:800; color:var(--line);
-    color:rgba(18,20,22,0.16);
-  }
+  .value .no{ position:absolute; top:16px; right:18px; font-size:0.6875rem; font-weight:700; color:rgba(18,20,22,0.16); }
   .value h4{
-    position:relative;
-    display:flex; align-items:center; justify-content:center;
+    position:relative; display:flex; align-items:center; justify-content:center;
     width:42px; height:42px; border-radius:12px;
     background:linear-gradient(150deg,var(--accent),var(--accent-2));
-    box-shadow:0 10px 18px -8px rgba(245,109,36,0.5);
-    margin:0 0 16px;
+    box-shadow:0 10px 18px -8px rgba(245,109,36,0.5); margin:0 0 16px;
   }
-  .value h5{ margin:0 0 7px; font-size:19px; font-weight:700; letter-spacing:-0.01em; }
-  .value p{ position:relative; margin:0; font-size:15px; color:var(--muted); line-height:1.6; }
+  .value h5{ margin:0 0 8px; font-size:1.1875rem; font-weight:700; letter-spacing:-0.01em; }
+  .value p{ position:relative; margin:0; font-size:0.9375rem; color:var(--muted); line-height:1.6; }
 
-  /* ===== ICON CONCEPT + PALETTE ===== */
-  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
-  .concept-list{ position:relative; padding-left:2px; }
+  /* ===================== ICON CONCEPT + PALETTE ===================== */
+  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,56px); }
+  .concept-list{ position:relative; }
   .concept-row{ position:relative; display:flex; align-items:flex-start; gap:18px; padding-bottom:28px; }
   .concept-row:last-child{ padding-bottom:0; }
   .concept-row::before{
-    content:"";
-    position:absolute; left:25px; top:52px; bottom:-4px; width:1.5px;
+    content:""; position:absolute; left:25px; top:52px; bottom:-4px; width:1.5px;
     background:repeating-linear-gradient(180deg, var(--line) 0 4px, transparent 4px 8px);
   }
   .concept-row:last-child::before{ display:none; }
   .concept-swatch{
     position:relative; flex:none; width:52px; height:52px; border-radius:14px;
-    background:#fff;
-    display:flex; align-items:center; justify-content:center;
+    background:var(--surface); display:flex; align-items:center; justify-content:center;
     box-shadow:0 8px 16px -10px rgba(18,20,22,0.2);
   }
-  .concept-text h5{ margin:2px 0 5px; font-size:19px; font-weight:700; }
-  .concept-text p{ margin:0; font-size:16px; color:var(--muted); line-height:1.6; max-width:320px; }
+  .concept-swatch .no{
+    position:absolute; top:-7px; right:-7px; width:18px; height:18px; border-radius:50%;
+    background:var(--ink); color:#fff; font-size:0.625rem; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .concept-text h5{ margin:2px 0 6px; font-size:1.1875rem; font-weight:700; }
+  .concept-text p{ margin:0; font-size:0.9375rem; color:var(--muted); line-height:1.6; max-width:340px; }
 
   .swatch-strip{ display:flex; height:14px; border-radius:8px; overflow:hidden; margin-bottom:16px; }
   .swatch-strip span{ flex:1; }
   .swatch-list{ display:flex; flex-direction:column; gap:10px; }
   .swatch-row{
     display:flex; align-items:center; gap:14px; padding:10px 12px 10px 10px;
-    border-radius:12px;
-    transition:border-color .2s ease, transform .2s ease; background-color: #FFFFFF;
+    border-radius:12px; background:var(--surface); border:1px solid var(--line);
+    transition:border-color .2s ease, transform .2s ease;
   }
   .swatch-row:hover{ border-color:rgba(245,109,36,0.35); transform:translateX(2px); }
   .swatch-row .chip{ width:36px; height:36px; border-radius:10px; flex:none; border:1px solid var(--line); }
-  .swatch-row .meta{ display:flex; flex-direction:column; }
-  .swatch-row .hex{ font-size:15.5px; font-weight:700; font-family:monospace; letter-spacing:.01em; }
-  .swatch-row .role{ font-size:13px; color:var(--muted); margin-top:1px; }
-  .palette-note{ margin-top:18px; font-size:16px; color:var(--muted); line-height:1.65; }
+  .swatch-row .meta{ display:flex; flex-direction:column; min-width:0; }
+  .swatch-row .hex{ font-size:0.9375rem; font-weight:700; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.01em; }
+  .swatch-row .role{ font-size:0.8125rem; color:var(--muted); margin-top:2px; }
+  .palette-note{ margin-top:20px; font-size:0.9375rem; color:var(--muted); line-height:1.7; }
   .palette-note b{ color:var(--ink); }
 
-  /* ===== TYPE + VARIANTS ===== */
+  /* ===================== TYPE + VARIANTS ===================== */
   .type-card{
-    display:flex; align-items:center; gap:28px;
-    padding:26px 30px;
-    border:1px solid var(--line); border-radius:18px;
-    background:#fff;
-    position:relative; overflow:hidden;
+    display:flex; align-items:center; gap:clamp(18px,3vw,28px); flex-wrap:wrap;
+    padding:clamp(22px,3.5vw,30px); border:1px solid var(--line); border-radius:var(--radius-lg);
+    background:var(--surface); position:relative; overflow:hidden;
   }
   .type-card::after{
-    content:"";
-    position:absolute; top:-40px; right:-40px;
-    width:120px; height:120px; border-radius:50%;
+    content:""; position:absolute; top:-40px; right:-40px; width:120px; height:120px; border-radius:50%;
     background:radial-gradient(circle, rgba(245,109,36,0.12), transparent 70%);
   }
-  .type-glyph{ font-size:60px; font-weight:800; line-height:1; flex:none; position:relative; }
-  .type-glyph small{ font-size:16px; font-weight:600; color:var(--muted); display:block; margin-top:4px; }
+  .type-glyph{ font-size:clamp(44px,7vw,60px); font-weight:700; line-height:1; flex:none; position:relative; }
+  .type-glyph small{ font-size:0.95rem; font-weight:600; color:var(--muted); display:block; margin-top:4px; }
   .type-divider{ width:1.5px; align-self:stretch; background:var(--line); }
   .type-info{ position:relative; }
-  .type-info .name{ font-size:26px; font-weight:700; margin-bottom:12px; }
-  .type-info .desc{ font-size:15.5px; color:var(--muted); letter-spacing:.02em; margin-bottom:10px; }
-  .type-sample{ font-size:14px; color:var(--muted); letter-spacing:.02em; }
+  .type-info .name{ font-size:1.5rem; font-weight:700; margin-bottom:5px; letter-spacing:-0.01em; }
+  .type-info .desc{ font-size:0.9375rem; color:var(--muted); letter-spacing:.02em; margin-bottom:12px; }
+  .type-sample{ font-size:0.9rem; color:var(--muted); letter-spacing:.02em; word-break:break-word; }
 
   .variants{ margin-top:24px; display:grid; grid-template-columns:1.5fr 1fr 1.5fr; gap:16px; }
   .variant-card{
-    position:relative;
-    border:1px solid var(--line); border-radius:16px; padding:24px 20px 20px;
-    display:flex; align-items:center; justify-content:center;
-    min-height:148px;
-    overflow:hidden;
-    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    position:relative; border:1px solid var(--line); border-radius:var(--radius-md); padding:24px 20px 20px;
+    display:flex; align-items:center; justify-content:center; min-height:104px; overflow:hidden;
+    background:var(--surface); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
   }
-  .variant-card > svg{ position:relative; z-index:1; }
- 
+  .variant-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:rgba(245,109,36,0.3); }
+  .variant-card > svg{ position:relative; z-index:1; max-width:100%; height:auto; }
   .variant-card .tag{
     position:absolute; z-index:2; top:10px; left:12px;
-    font-size:9.5px; font-weight:800; letter-spacing:.09em; text-transform:uppercase;
-    color:var(--muted);
-    background:#F3F1EC;
-    padding:4px 9px; border-radius:100px;
+    font-size:0.6875rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--muted); background:var(--tint); padding:5px 10px; border-radius:100px;
   }
   .variant-card.dark{ background:var(--ink); border-color:var(--ink); }
   .variant-card.dark .tag{ background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.75); }
+  .variant-card.dark:hover{ box-shadow:0 20px 40px -22px rgba(245,109,36,0.4); }
 
+  .lookfeel{ font-size:1.0625rem; line-height:1.75; color:var(--muted); margin:0; }
 
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 900px){
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero-visual{ padding-top:20px; }
+  /* ===================== SECTION BACKGROUND ALTERNATION ===================== */
+  .section.tint{ background:var(--tint); }
+
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 1024px){
     .values{ grid-template-columns:repeat(2,1fr); }
-    .two-col{ grid-template-columns:1fr; gap:40px; }
+  }
+  @media (max-width: 860px){
+    .hero-grid{ grid-template-columns:1fr; text-align:left; }
+    .hero-visual{ padding-top:12px; justify-content:flex-start; }
+    .two-col{ grid-template-columns:1fr; }
     .variants{ grid-template-columns:1fr; }
-    .type-card{ flex-wrap:wrap; }
   }
   @media (max-width: 560px){
     .values{ grid-template-columns:1fr; }
     .kicker{ flex-direction:column; align-items:flex-start; gap:6px; }
-    .hero-mark svg{ width:220px; height:auto; }
-    .graphic-strip{ height:150px; }
+    .hero-mark{ transform:none; }
+    .hero-mark svg{ width:min(240px,60vw); }
+    .type-card{ gap:16px; }
+    .type-divider{ display:none; }
   }
 </style>
 </head>
 <body>
-
-<!-- ===================== shared logo defs (from the user's real logo-text.svg) ===================== -->
 <svg width="0" height="0" style="position:absolute">
   <defs>
     <linearGradient id="hm-grad" x1="60" y1="60" x2="110" y2="110" gradientUnits="userSpaceOnUse">
@@ -338,159 +296,169 @@
   </defs>
 </svg>
 
+
 <div class="poster">
 
   <!-- ============ HERO / BRAND OVERVIEW ============ -->
-  <div class="hero">
+  <section class="hero">
     <div class="hero-mesh"></div>
-    <div class="kicker">
-      <span>BRAND OVERVIEW</span>
-      <span class="dot"><i></i>HOANG MY - UI/UX DESIGNER</span>
-    </div>
-
-    <div class="hero-grid">
-      <div>
-        <p class="hero-statement">Turning <span class="em">idea</span> into simple and people <span class="em">love to use</span>.</p>
-        <p class="hero-sub">Focusing on creating designs that feel clear, friendly, and easy to use. <br />Colors, shapes, and typography work together to make each experience feel natural and consistent.</p>
+    <div class="wrap">
+      <div class="kicker">
+        <span>Brand Overview</span>
+        <span class="dot"><i></i>HOANG MY - UI/UX DESIGNER</span>
       </div>
-      <div class="hero-visual">
-        <div class="hv-halo"></div>
-        <svg class="hv-dots" width="330" height="200" viewBox="0 0 330 200">
-          <circle cx="24" cy="30" r="3" fill="#F56D24"/>
-          <circle cx="306" cy="24" r="2.5" fill="#121416" opacity="0.4"/>
-          <circle cx="18" cy="172" r="2.5" fill="#121416" opacity="0.4"/>
-          <circle cx="312" cy="180" r="3" fill="#F56D24"/>
-        </svg>
-        <div class="hero-mark">
-          <svg width="300" height="74" viewBox="0 0 688 170"><use href="#hm-full"/></svg>
-          <div class="hv-orb"><span class="ring"></span><span class="core"></span></div>
-          <div class="hv-tag"><i></i>Primary Lockup</div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="hero-statement">Turning <span class="em">an idea</span> into something simple, people <span class="em">love to use</span>.</p>
+          <p class="hero-sub">Focusing on creating designs that feel clear, friendly, and easy to use.<br>Colors, shapes, and typography work together to make each experience feel natural and consistent.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="hv-halo"></div>
+          <svg class="hv-dots" width="330" height="200" viewBox="0 0 330 200">
+            <circle cx="24" cy="30" r="3" fill="#F56D24"/>
+            <circle cx="306" cy="24" r="2.5" fill="#121416" opacity="0.4"/>
+            <circle cx="18" cy="172" r="2.5" fill="#121416" opacity="0.4"/>
+            <circle cx="312" cy="180" r="3" fill="#F56D24"/>
+          </svg>
+          <div class="hero-mark">
+            <svg viewBox="0 0 688 170"><use href="#hm-full"/></svg>
+            <div class="hv-orb"><span class="ring"></span><span class="core"></span></div>
+            <div class="hv-tag"><i></i>Primary Lockup</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ============ BRAND VALUES ============ -->
-  <div class="section" style="background-color: #FFFFFF;">
-    <p class="section-title">Brand Values</p>
-    <div class="values">
-      <div class="value">
-        <span class="no">01</span>
-        <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="#fff" stroke-width="1.8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></h4>
-        <h5>Clarity</h5>
-        <p>Keep things simple. People should only see what they actually need - nothing extra.</p>
-      </div>
-      <div class="value">
-        <span class="no">02</span>
-        <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="m9 12 2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></h4>
-        <h5>Care</h5>
-        <p>Take the small stuff seriously - spacing, wording, timing. It all adds up.</p>
-      </div>
-      <div class="value">
-        <span class="no">03</span>
-        <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 1 0-7 7l1.6 1.7L12 20l7.1-6.7 1.6-1.7a5 5 0 0 0 0-7Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></h4>
-        <h5>Kindness</h5>
-        <p>Think about how people feel first, not just how a screen looks.</p>
-      </div>
-      <div class="value">
-        <span class="no">04</span>
-        <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></h4>
-        <h5>Moving Forward</h5>
-        <p>Keep going — from a rough idea all the way to something people can actually use.</p>
+  <section class="section">
+    <div class="wrap">
+      <p class="section-title">Brand Values</p>
+      <div class="values">
+        <div class="value">
+          <span class="no">01</span>
+          <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="#fff" stroke-width="1.8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></h4>
+          <h5>Clarity</h5>
+          <p>Keep things simple. People should only see what they actually need - nothing extra.</p>
+        </div>
+        <div class="value">
+          <span class="no">02</span>
+          <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="m9 12 2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></h4>
+          <h5>Care</h5>
+          <p>Take the small stuff seriously - spacing, wording, timing. It all adds up.</p>
+        </div>
+        <div class="value">
+          <span class="no">03</span>
+          <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 1 0-7 7l1.6 1.7L12 20l7.1-6.7 1.6-1.7a5 5 0 0 0 0-7Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></h4>
+          <h5>Kindness</h5>
+          <p>Think about how people feel first, not just how a screen looks.</p>
+        </div>
+        <div class="value">
+          <span class="no">04</span>
+          <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></h4>
+          <h5>Moving Forward</h5>
+          <p>Keep going - from a rough idea all the way to something people can actually use.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ============ ICON CONCEPT + COLOR PALETTE ============ -->
-  <div class="section">
-    <div class="two-col">
-      <div>
-        <p class="section-title">The Icon</p>
-        <div class="concept-list">
-          <div class="concept-row">
-            <span class="concept-swatch"><svg width="26" height="26" viewBox="0 0 170 170"><use href="#hm-icon"/></svg></span>
-            <div class="concept-text">
-              <h5>An open frame</h5>
-              <p>The black shape looks like an open frame — like a screen just waiting to be filled with ideas.</p>
+  <section class="section tint">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <p class="section-title">The Icon</p>
+          <div class="concept-list">
+            <div class="concept-row">
+              <span class="concept-swatch"><svg width="26" height="26" viewBox="0 0 170 170"><use href="#hm-icon"/></svg></span>
+              <div class="concept-text">
+                <h5>An open frame</h5>
+                <p>The black shape looks like an open frame — like a screen just waiting to be filled with ideas.</p>
+              </div>
             </div>
-          </div>
-          <div class="concept-row">
-            <span class="concept-swatch"><span style="width:16px;height:16px;background:linear-gradient(135deg,#F56D24,#FF3700);border-radius:4px;display:block;"></span></span>
-            <div class="concept-text">
-              <h5>The main idea</h5>
-              <p>The orange square is the first thing you notice. It represents the main idea at the center of the design.</p>
+            <div class="concept-row">
+              <span class="concept-swatch"><span style="width:16px;height:16px;background:linear-gradient(135deg,#F56D24,#FF3700);border-radius:4px;display:block;"></span></span>
+              <div class="concept-text">
+                <h5>The main idea</h5>
+                <p>The orange square is the first thing you notice. It represents the main idea at the center of the design.</p>
+              </div>
             </div>
-          </div>
-          <div class="concept-row">
-            <span class="concept-swatch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" stroke="#121416" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" stroke="#121416" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" stroke="#121416" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" stroke="#121416" stroke-width="1.6"/></svg></span>
-            <div class="concept-text">
-              <h5>Everything lines up</h5>
-              <p>Every part of the mark follows the same grid, keeping the design clean, balanced, and consistent.</p>
+            <div class="concept-row">
+              <span class="concept-swatch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" stroke="#121416" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" stroke="#121416" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" stroke="#121416" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" stroke="#121416" stroke-width="1.6"/></svg></span>
+              <div class="concept-text">
+                <h5>Everything lines up</h5>
+                <p>Every part of the mark follows the same grid, keeping the design clean, balanced, and consistent.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div>
-        <p class="section-title">Colors</p>
-        <div class="swatch-strip">
-          <span style="background:#F56D24;"></span>
-          <span style="background:#FF3700;"></span>
-          <span style="background:#121416;"></span>
-          <span style="background:#676A6F;"></span>
-          <span style="background:#FFFFFF;"></span>
+        <div>
+          <p class="section-title">Colors</p>
+          <div class="swatch-strip">
+            <span style="background:#F56D24;"></span>
+            <span style="background:#FF3700;"></span>
+            <span style="background:#121416;"></span>
+            <span style="background:#676A6F;"></span>
+            <span style="background:#FFFFFF;"></span>
+          </div>
+          <div class="swatch-list">
+            <div class="swatch-row"><span class="chip" style="background:#F56D24;"></span><span class="meta"><span class="hex">#F56D24</span><span class="role">Primary - Orange</span></span></div>
+            <div class="swatch-row"><span class="chip" style="background:#FF3700;"></span><span class="meta"><span class="hex">#FF3700</span><span class="role">Primary Dark - Orange Deep</span></span></div>
+            <div class="swatch-row"><span class="chip" style="background:#121416;"></span><span class="meta"><span class="hex">#121416</span><span class="role">Text - Ink</span></span></div>
+            <div class="swatch-row"><span class="chip" style="background:#676A6F;"></span><span class="meta"><span class="hex">#676A6F</span><span class="role">Muted - Grey</span></span></div>
+            <div class="swatch-row"><span class="chip" style="background:#FFFFFF;border-color:#121416;"></span><span class="meta"><span class="hex">#FFFFFF</span><span class="role">Surface - White</span></span></div>
+          </div>
+          <p class="palette-note"><b>Orange</b> stands for energy and fresh ideas - it's used to point out the important stuff. <b>Black</b> keeps everything else calm, clean, and easy to read.</p>
         </div>
-        <div class="swatch-list">
-          <div class="swatch-row"><span class="chip" style="background:#F56D24;"></span><span class="meta"><span class="hex">#F56D24</span><span class="role">Primary — Orange</span></span></div>
-          <div class="swatch-row"><span class="chip" style="background:#FF3700;"></span><span class="meta"><span class="hex">#FF3700</span><span class="role">Primary Dark — Orange Deep</span></span></div>
-          <div class="swatch-row"><span class="chip" style="background:#121416;"></span><span class="meta"><span class="hex">#121416</span><span class="role">Text — Ink</span></span></div>
-          <div class="swatch-row"><span class="chip" style="background:#676A6F;"></span><span class="meta"><span class="hex">#676A6F</span><span class="role">Muted — Grey</span></span></div>
-          <div class="swatch-row"><span class="chip" style="background:#FFFFFF;border-color:#121416;"></span><span class="meta"><span class="hex">#FFFFFF</span><span class="role">Surface — White</span></span></div>
-        </div>
-        <p class="palette-note"><b>Orange</b> stands for energy and fresh ideas — it's used to point out the important stuff. <b>Black</b> keeps everything else calm, clean, and easy to read.</p>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ============ TYPOGRAPHY + LOGO VARIANTS ============ -->
-  <div class="section"  style="background-color: #FFFFFF;">
-    <p class="section-title">Font</p>
-    <div class="type-card">
-      <div class="type-glyph">Aa<small>Bb</small></div>
-      <div class="type-divider"></div>
-      <div class="type-info">
-        <div class="name">Inter</div>
-        <div class="desc">Clean · Easy to read · Friendly</div>
-        <div class="type-sample">ABCDEFGHIJKLM · abcdefghijklm · 0123456789</div>
+  <section class="section">
+    <div class="wrap">
+      <p class="section-title">Font</p>
+      <div class="type-card">
+        <div class="type-glyph">Aa<small>Bb</small></div>
+        <div class="type-divider"></div>
+        <div class="type-info">
+          <div class="name">Inter</div>
+          <div class="desc">Clean · Easy to read · Friendly</div>
+          <div class="type-sample">ABCDEFGHIJKLM · abcdefghijklm · 0123456789</div>
+        </div>
       </div>
-    </div>
 
-    <div class="variants">
-      <div class="variant-card">
-        <span class="tag">Full color</span>
-        <svg width="150" height="37" viewBox="0 0 688 170"><use href="#hm-full"/></svg>
-      </div>
-      <div class="variant-card">
-        <span class="tag">Icon only</span>
-        <svg width="40" height="40" viewBox="0 0 170 170"><use href="#hm-icon"/></svg>
-      </div>
-      <div class="variant-card dark">
-        <span class="tag">Reversed</span>
-        <svg width="150" height="37" viewBox="0 0 688 170"><use href="#hm-full-rev"/></svg>
+      <div class="variants">
+        <div class="variant-card">
+          <span class="tag">Full color</span>
+          <svg width="150" height="37" viewBox="0 0 688 170"><use href="#hm-full"/></svg>
+        </div>
+        <div class="variant-card">
+          <span class="tag">Icon only</span>
+          <svg width="40" height="40" viewBox="0 0 170 170"><use href="#hm-icon"/></svg>
+        </div>
+        <div class="variant-card dark">
+          <span class="tag">Reversed</span>
+          <svg width="150" height="37" viewBox="0 0 688 170"><use href="#hm-full-rev"/></svg>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ============ VISUAL EXPRESSION ============ -->
-  <div class="section" >
-    <p class="section-title">Look &amp; Feel</p>
-    <p style="font-size:16px;line-height:1.75;color:var(--muted);margin:0;">
-      Keep it simple: a warm background, one bold color, and a mark that still looks good whether it's tiny (a favicon) or huge (a poster). Everything follows the same rule as the design work itself - clean layouts, plenty of space, and one clear focus on every screen.
-    </p>
-  </div>
+  <section class="section tint">
+    <div class="wrap">
+      <p class="section-title">Look &amp; Feel</p>
+      <p class="lookfeel">
+        Keep it simple: a warm background, one bold color, and a mark that still looks good whether it's tiny (a favicon) or huge (a poster). Everything follows the same rule as the design work itself - clean layouts, plenty of space, and one clear focus on every screen.
+      </p>
+    </div>
+  </section>
 
 </div>
-
 
 </body>
 </html>
