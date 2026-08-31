@@ -71,15 +71,14 @@ export default function Nav() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-paper/90 backdrop-blur-md border-b border-line"
-          : "bg-transparent border-b border-transparent"
-      }`}
-    >
-
-<nav className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between h-16 sm:h-20">
+<header
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-5 sm:px-8 lg:px-12 ${
+    scrolled
+      ? "bg-paper/90 backdrop-blur-md border-b border-line"
+      : "bg-transparent border-b border-transparent"
+  }`}
+>
+  <nav className="max-w-[1400px] mx-auto flex items-center justify-between h-16 sm:h-20">
         {/* LOGO */}
         <a
           href="#top"
