@@ -8,7 +8,7 @@ const LINKS = [
   {
     href: "/brand.html",
     label: "Brand",
-    newTab: true,
+    newTab: false,
   },
   { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
