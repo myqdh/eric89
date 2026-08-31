@@ -8,7 +8,7 @@ const LINKS = [
   {
     href: "/brand.html",
     label: "Brand",
-    newTab: false,
+    newTab: true,
   },
   { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
@@ -78,8 +78,8 @@ export default function Nav() {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <nav className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between h-16 sm:h-20">
 
+<nav className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between h-16 sm:h-20">
         {/* LOGO */}
         <a
           href="#top"
