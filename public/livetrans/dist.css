@@ -1293,7 +1293,7 @@ video {
 
 .text-brand {
     --tw-text-opacity: 1;
-    color: rgb(255 74 30/var(--tw-text-opacity, 1))
+    color: #ff4d1c;
 }
 
 .text-faint {

@@ -5,11 +5,11 @@ import { profile } from "../data/cv";
 
 const LINKS = [
   { href: "#about", label: "About" },
-  /*{
+  {
     href: "/brand.html",
     label: "Brand",
     newTab: true,
-  },*/
+  },
   { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#education", label: "Education" },
