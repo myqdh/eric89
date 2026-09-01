@@ -27,7 +27,15 @@
     --shadow-sm:0 10px 26px -18px rgba(21,22,26,.22);
     --maxw:1160px;
   }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit
+}
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important;}
   }
@@ -188,13 +196,13 @@
   .hero-kicker .sep{color:var(--line-strong);}
   .hero-sub{
     font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
-    color:var(--primary); margin-bottom:14px;
+    color:var(--primary); margin-bottom:16px;
   }
   .hero h1{
-    font-size:clamp(52px,8vw,72px); font-weight:700; line-height:.92;
+    font-size:72px;line-height:.92;font-weight:800; 
     margin-bottom:26px; max-width:14ch;
   }
-  .hero-desc{ font-size:19px; color:var(--ink-soft); max-width:46ch; margin-bottom:30px;}
+  .hero-desc{ font-size:18px; color:var(--ink-soft); max-width:46ch; margin-bottom:30px;}
   .tag-row{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:56px;}
   .tag{
     font-size:13px; font-weight:600; padding:8px 15px; border-radius:999px;
@@ -371,7 +379,7 @@
       <span class="sep">/</span>
       <span>B2C TRAVEL PLATFORM</span>
     </div>
-    <div class="hero-sub">Product design case study</div>
+    <div class="hero-sub">Product design</div>
     <h1 class="reveal in">Ohmyhotel</h1>
     <p class="hero-desc">Designing and improving the hotel booking experience across web and mobile, supported by a shared design system for multiple Asian markets.</p>
     <div class="tag-row">
