@@ -73,7 +73,7 @@ export default function Hero() {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="max-w-md text-base sm:text-lg text-muted leading-relaxed"
               >
-                {profile.experienceLine} in UI/UX Design, Product Design &amp; Visual Design.
+                UI/UX Design, Product Design &amp; Visual Design.
               </motion.div>
             </div>
           </div>
