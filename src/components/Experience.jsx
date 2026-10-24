@@ -5,18 +5,13 @@ import { experience } from "../data/cv";
 import Reveal from "./Reveal";
 import { usePrefersReducedMotion } from "../hooks/useReducedMotion";
 
-/*const CASE_STUDIES = {
-  Ohmyhotel: { label: "Ohmyhotel — Case Study", href: "/projects/ohmyhotel/" },
-  "FPT Software": { label: "Utop — UI Showcase", href: "/projects/utop/" },
-  Bravesoft: { label: "LiveTrans - Case Study", href: "/projects/livetrans/" },
-};
-*/
+
 function ExperienceItem({ item, index, isOpen, onToggle }) {
   const reduced = usePrefersReducedMotion();
   const panelId = `exp-panel-${index}`;
   const buttonId = `exp-button-${index}`;
   const itemRef = useRef(null);
-  //const study = CASE_STUDIES[item.company];
+
 
   const handleToggle = () => {
     onToggle(index);
