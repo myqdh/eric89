@@ -1,0 +1,35 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/ohmyhotel",
+      "destination": "/projects/ohmyhotel/",
+      "permanent": true
+    },
+    {
+      "source": "/ohmyhotel/",
+      "destination": "/projects/ohmyhotel/",
+      "permanent": true
+    },
+    {
+      "source": "/utop",
+      "destination": "/projects/utop/",
+      "permanent": true
+    },
+    {
+      "source": "/utop/",
+      "destination": "/projects/utop/",
+      "permanent": true
+    },
+    {
+      "source": "/livetrans",
+      "destination": "/projects/livetrans/",
+      "permanent": true
+    },
+    {
+      "source": "/livetrans/",
+      "destination": "/projects/livetrans/",
+      "permanent": true
+    }
+  ]
+}
