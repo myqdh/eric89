@@ -128,7 +128,7 @@ export default function AIRecord() {
               <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-line bg-paper px-5 py-4">
                 <b className="inline-flex items-center gap-2.5 text-[15px] font-semibold">
                   <Smartphone size={16} strokeWidth={1.8} className="text-ember shrink-0" />
-                  AI Record — Coming soon on the App Store
+                  AI Record - Coming soon on the App Store
                 </b>
                 <span className="inline-flex items-center gap-2 text-sm font-medium">
                   <span className="airec__dot" aria-hidden />
