@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../styles/ai-record.css";
-import { Mic, Sparkles, FileText, Sun, Target, Code2, Smartphone } from "lucide-react";
+import { Mic, Sparkles, FileText, Sun, Target, Code2, Smartphone, Download } from "lucide-react";
 import Reveal from "./Reveal";
 
 /** AI Record — side-project showcase. Illustration styles live in AIRecord.css (prefix `airec`). */
@@ -85,6 +85,7 @@ export default function AIRecord() {
                 in any language, then get clear key takeaways and action items in English,
                 Vietnamese, Korean or Chinese.
               </p>
+      
             </Reveal>
 
             <Reveal delay={0.2}>
@@ -133,6 +134,15 @@ export default function AIRecord() {
                 <span className="inline-flex items-center gap-2 text-sm font-medium">
                   <span className="airec__dot" aria-hidden />
                   Coming soon
+                </span>
+              </div>
+               <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-line bg-paper px-5 py-4">
+                <b className="inline-flex items-center gap-2.5 text-[15px] font-semibold">
+                  <Download size={16} strokeWidth={1.8} className="text-ember shrink-0" />
+                 AI Record.ipa
+                </b>
+                <span className="inline-flex items-center gap-2 text-sm font-medium">
+                 <a href="mailto: myqdh.cm@gmail.com"  target="_blank" className="text-ember">Contact me</a>
                 </span>
               </div>
             </Reveal>
@@ -231,6 +241,7 @@ export default function AIRecord() {
           </Reveal>
         </div>
       </div>
+  
     </section>
   );
 }
