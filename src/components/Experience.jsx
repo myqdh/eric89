@@ -5,18 +5,18 @@ import { experience } from "../data/cv";
 import Reveal from "./Reveal";
 import { usePrefersReducedMotion } from "../hooks/useReducedMotion";
 
-const CASE_STUDIES = {
+/*const CASE_STUDIES = {
   Ohmyhotel: { label: "Ohmyhotel — Case Study", href: "/projects/ohmyhotel/" },
   "FPT Software": { label: "Utop — UI Showcase", href: "/projects/utop/" },
   Bravesoft: { label: "LiveTrans - Case Study", href: "/projects/livetrans/" },
 };
-
+*/
 function ExperienceItem({ item, index, isOpen, onToggle }) {
   const reduced = usePrefersReducedMotion();
   const panelId = `exp-panel-${index}`;
   const buttonId = `exp-button-${index}`;
   const itemRef = useRef(null);
-  const study = CASE_STUDIES[item.company];
+  //const study = CASE_STUDIES[item.company];
 
   const handleToggle = () => {
     onToggle(index);
@@ -122,26 +122,6 @@ function ExperienceItem({ item, index, isOpen, onToggle }) {
                     </p>
                   </div>
                 </div>
-
-                {study && (
-                  <div className="mt-6 grid sm:grid-cols-2 gap-5 rounded-xl border border-line bg-paper p-5 items-center">
-                    <div className="flex items-center gap-2">
-                      <BookText size={15} className="text-ember" />
-                      <p className="text-base font-semibold tracking-wide">{study.label}</p>
-                    </div>
-                    <div className="flex sm:justify-end">
-                      <a
-                        href={study.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="focus-ring group inline-flex items-center gap-2 text-sm font-medium"
-                      >
-                        <span>Explore Project</span>
-                        <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                      </a>
-                    </div>
-                  </div>
-                )}
               </div>
             </motion.div>
           )}
