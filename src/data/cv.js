@@ -17,8 +17,7 @@ export const profile = {
 };
 
 export const summary =
-  "With 5 years of experience spanning UI/UX Design, Product Design, and Visual Design across the travel, hospitality, e-commerce, and enterprise platforms. I specialize in leading end-to-end product design initiatives from discovery to delivery, building scalable design systems, and driving user-centered product strategies. With strong expertise in design operations and product thinking, I collaborate effectively with cross-functional teams to create digital experiences that balance business goals with user needs.";
-
+  "I am a Product Designer with 5 years of experience in UI/UX and Visual Design. I specialize in leading projects from idea to launch, building design systems, and collaborating with cross-functional teams to create polished, user-friendly digital products."
 export const education = [
   {
     degree: "Master of Computer Science",
