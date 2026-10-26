@@ -11,3 +11,4 @@ export const contactLinks = [
 
 export const isExternal = (href) => href.startsWith("http");
 export const CV_URL = "/files/UIUXDesign_QuachDangHoangMy.pdf";
+export const PORTFOLIO_URL = "/files/Portfolio_QuachDangHoangMy.pdf";

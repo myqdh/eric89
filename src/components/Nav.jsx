@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import { CV_URL } from "../data/contacts";
+import { CV_URL, PORTFOLIO_URL } from "../data/contacts";
 import Logo from "./Logo";
 
 const LINKS = [
@@ -20,12 +20,25 @@ function CvButton({ className }) {
       download
       className={`focus-ring items-center gap-1.5 text-sm font-semibold border border-ink hover:bg-ink hover:text-paper transition-colors duration-200 ${className}`}
     >
-      Download CV
+      Resume
       <ArrowUpRight size={15} strokeWidth={2.2} />
     </a>
+
   );
 }
+function PfButton({ className }) {
+  return (
+    <a
+      href={PORTFOLIO_URL}
+      download
+      className={`focus-ring items-center gap-1.5 text-sm font-semibold border border-ink hover:bg-ink hover:text-paper transition-colors duration-200 ${className}`}
+    >
+      Portfolio
+      <ArrowUpRight size={15} strokeWidth={2.2} />
+    </a>
 
+  );
+}
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -62,7 +75,7 @@ export default function Nav() {
             <Logo />
           </a>
 
-          <ul className="hidden md:flex items-center gap-8 lg:gap-10">
+          <ul className="hidden md:flex items-center gap-6 lg:gap-8">
             {LINKS.map(({ href, label }) => (
               <li key={href}>
                 <a
@@ -76,8 +89,10 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-
+            <div className="flex items-center gap-1">
           <CvButton className="hidden md:inline-flex rounded-full px-4 py-2" />
+          <PfButton className="hidden md:inline-flex rounded-full px-4 py-2" />
+          </div>
 
           <button
             type="button"
@@ -122,7 +137,11 @@ export default function Nav() {
                 transition={{ duration: 0.25, delay: 0.04 * LINKS.length }}
                 className="pt-6"
               >
-                <CvButton className="inline-flex px-4 py-2.5" />
+    
+                 <div className="flex items-center gap-3">
+          <CvButton className="inline-flex px-4 py-2.5" />
+          <PfButton className="inline-flex px-4 py-2.5" />
+          </div>
               </motion.li>
             </ul>
           </motion.div>
