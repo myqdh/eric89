@@ -12,6 +12,15 @@ const pills = [
   { icon: Sun, label: "Light & Dark mode" },
 ];
 
+const screens = [
+  { img: "library", title: "Library", text: "Every recording in one searchable place." },
+  { img: "record-ready", title: "Ready to record", text: "Auto-detects the spoken language. Choose your summary language." },
+  { img: "recording", title: "Recording", text: "Live waveform and timer. Pause or cancel anytime." },
+  { img: "summary", title: "AI Summary", text: "Overview, key takeaways and action items, ready to edit." },
+  { img: "transcript", title: "Transcript", text: "Full transcript synced with audio playback." },
+  { img: "account", title: "Account", text: "Usage minutes, support and appearance settings." },
+];
+
 export default function AIRecord() {
   const stageRef = useRef(null);
   const timerRef = useRef(null);
@@ -240,8 +249,51 @@ export default function AIRecord() {
             </div>
           </Reveal>
         </div>
+
+        {/* SCREENS — continuation of the project, same section */}
+        <div className="mt-16 lg:mt-20">
+          <Reveal>
+            <h3 className="text-xl sm:text-2xl leading-snug tracking-tight">
+              <span className="font-bold">From voice to summary</span> in six screens.
+            </h3>
+            <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-ink/70">
+              End-to-end user flow: record in any language with a live waveform, then read the AI
+              summary and full transcript, all in one native SwiftUI app.
+            </p>
+          </Reveal>
+
+          <div className="airec__shots mt-6">
+            <ol className="airec__flow">
+              {screens.map(({ img, title, text }, i) => (
+                <Reveal as="li" key={img} delay={i * 0.07} className="airec__step">
+                  <figure className="airec__ph">
+                    <span className="airec__btn airec__btn--a" aria-hidden />
+                    <span className="airec__btn airec__btn--v1" aria-hidden />
+                    <span className="airec__btn airec__btn--v2" aria-hidden />
+                    <span className="airec__btn airec__btn--p" aria-hidden />
+                    <div className="airec__scr">
+                      <img
+                        src={`/images/site/airecord/${img}.png`}
+                        width={540}
+                        height={1174}
+                        loading="lazy"
+                        decoding="async"
+                        alt={`AI Record ${title} screen`}
+                      />
+                      <i className="airec__island" aria-hidden />
+                    </div>
+                  </figure>
+                  <div className="airec__cap">
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                    <h4>{title}</h4>
+                    <p>{text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
+        </div>
       </div>
-  
     </section>
   );
 }
