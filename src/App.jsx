@@ -5,7 +5,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-import AIRecord from "./components/AIRecord";
+import AIRecord from "./components/AIProjects";
 
 export default function App() {
   return (
